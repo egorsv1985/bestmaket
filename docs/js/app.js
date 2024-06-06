@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
 	var borderTop = $('header').css('border-top-width').replace('px', '')
 	$(window).scroll(function (event) {

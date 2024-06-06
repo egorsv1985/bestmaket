@@ -2,18 +2,64 @@
 	&__list {
 		li.active,
 		li:hover {
-			
 			background-color: rgb(22, 126, 194);
 			border: none;
-			a{
+			a {
 				color: #fff;
 			}
 		}
 		li {
 			border: 1px solid rgb(82, 82, 82);
 			border-radius: 27.5px;
-	
 		}
-		
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+	}
+	&__item {
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+		border-top: 10px solid #525252;
+	}
+	&__item:nth-child(2) {
+		grid-area: 2 / 1 / 4 / 2;
+	}
+	&__item:nth-child(3) {
+		grid-area: 1 / 2 / 4 / 4;
+	}
+	&__item:nth-child(4) {
+		grid-area: 1 / 4 / 3 / 4;
+	}
+	&__item:nth-child(5) {
+		grid-area: 3 / 4 / 3 / 4;
+	}
+	&__item:nth-child(7) {
+		grid-area: 2 / 5 / 3 / 5;
+	}
+	&__item:last-child {
+		grid-area: 3 / 5 / 4 / 7;
+	}
+	&__content {
+		flex-direction: column;
+	}
+	&__item.active {
+		border-top: 10px solid #167ec2;
+		.portfolio__num {
+			color: #167ec2;
+		}
+		.portfolio__box-img {
+			order: 1;
+		}
+		.portfolio__text {
+			color: #167ec2;
+			font-size: 20px;
+		}
+		.portfolio__content {
+			justify-content: space-between;
+			flex-direction: row;
+		}
 	}
 }
