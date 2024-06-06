@@ -1,0 +1,7 @@
+.gallery { background: #8dce26; min-height: 10px; font-size: 14px; color: #fff; padding: 3px 15px; }
+.gallery:before { content: 'Интервал фотографий:'; display: block; font-size: 12px; color: red; }
+.calculator { content: 'Калькулятор'; border: 2px solid #2888c7; color: #000;  padding: 10px; }
+blockquote { background: #efefef; font-style: italic; border-left: 8px solid #1580c3; margin: 2em 0; padding: 2%; }
+.btn-large { border: 1px solid #000; text-align: center; }
+.btn-large a { display: inline-block; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; color: #fff; cursor: pointer; background: #98d62f; padding: 12px 40px; border: none; border-radius: 23px; }
+.btn-large a:hover { background: #c2de96; color: #fff; }
