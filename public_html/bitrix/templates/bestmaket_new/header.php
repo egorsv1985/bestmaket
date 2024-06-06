@@ -75,7 +75,7 @@ $APPLICATION->IncludeFile("/includes/code-body.php", array(), array(
 	<div class="page404">
 		<div class="contaner">
 			<div class="header">
-				<a href="/" class="logo">
+				<a href="/" class="logo1">
 					<img src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png" alt="Макетная мастерская">
 				</a>
 			</div>
