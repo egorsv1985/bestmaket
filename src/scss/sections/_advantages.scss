@@ -1,0 +1,30 @@
+.advantages{
+	li{
+		position: relative;
+		max-width: 20%;
+		&:last-child{
+			text-align: right;
+			&::before{
+				right: 0;
+			}
+		}
+		&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: #000;
+				top: -27%;
+				bottom: 110%;
+				width: 1px;
+				
+		}
+		&:first-child::before{
+			left: 0;
+		}
+		&:nth-child(2)::before{
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	
+}

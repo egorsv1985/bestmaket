@@ -1,0 +1,30 @@
+.why-work {
+	// .why-work__content
+	&__content {
+	}
+	// .why-work__text
+	&__text {
+		&--left {
+			background-color: #f3f3f3;
+			max-width: 70%;
+		}
+		&--right {
+			background-color: #e9e9e9;
+			max-width: 70%;
+			margin-left: auto;
+			margin-top: -35px;
+			&::before {
+				content: '';
+				display: block;
+				border: 1px solid #000;
+				border-radius: 5px;
+				position: absolute;
+				left: -26%;
+				right: 10%;
+				top: -15%;
+				bottom: 55%;
+				z-index: -1;
+			}
+		}
+	}
+}
