@@ -33,13 +33,16 @@ global $ERROR_404;
 
 
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.8.2.min.js"); ?>
+    <? $APPLICATION->AddHeadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.fancybox-1.3.4.js"); ?>
+    <? $APPLICATION->AddHeadScript("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.flexslider.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.inputmask.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/autoresize.jquery.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/bootstrap.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/script.js"); ?>
-
+    
+    <? $APPLICATION->SetAdditionalCSS("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/normalize.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery.fancybox-1.3.4.css'); ?>
@@ -122,7 +125,7 @@ global $ERROR_404;
                                         </span>
                                     <? else : ?>
                                         <a href="/" class="logo d-block mw-100 text-center">
-                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png"  class="w-100 h-auto"alt="Макетная мастерская" width="182" height="62">
+                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class="w-100 h-auto" alt="Макетная мастерская" width="182" height="62">
                                         </a>
                                     <? endif; ?>
                                 </div>
@@ -157,108 +160,4 @@ global $ERROR_404;
                         </div>
 
                     </div>
-                    <? if (PAGE == 'MAIN') : ?>
-                        <?
-                        /*
-$APPLICATION->IncludeFile("/includes/slider.php", array(), array(
-	'NAME' => 'слайдер',
-	'MODE' => 'php'
-));
-*/
-                        ?>
-                        <div class="request-calc-1">
-                            <div class="contaner">
-                                <div class="content">
-                                    <?
-                                    $APPLICATION->IncludeFile("/includes/main-request-1.php", array(), array(
-                                        'NAME' => 'текст',
-                                        'MODE' => 'html'
-                                    ));
-                                    ?>
-                                </div>
-                                <div class="form-contaner">
-                                    <? $APPLICATION->IncludeComponent(
-                                        "tkk:infoportal.element.add.form",
-                                        "form-small",
-                                        array(
-                                            "COMPONENT_TEMPLATE" => "form-small",
-                                            "CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",    // * дата начала *
-                                            "CUSTOM_TITLE_DATE_ACTIVE_TO" => "",    // * дата завершения *
-                                            "CUSTOM_TITLE_DETAIL_PICTURE" => "",    // * подробная картинка *
-                                            "CUSTOM_TITLE_DETAIL_TEXT" => "",    // * подробный текст *
-                                            "CUSTOM_TITLE_IBLOCK_SECTION" => "",    // * раздел инфоблока *
-                                            "CUSTOM_TITLE_NAME" => "Ваше имя",    // * наименование *
-                                            "CUSTOM_TITLE_PREVIEW_PICTURE" => "",    // * картинка анонса *
-                                            "CUSTOM_TITLE_PREVIEW_TEXT" => "Сообщение",    // * текст анонса *
-                                            "CUSTOM_TITLE_TAGS" => "",    // * теги *
-                                            "DEFAULT_INPUT_SIZE" => "30",    // Размер полей ввода
-                                            "DETAIL_TEXT_USE_HTML_EDITOR" => "N",    // Использовать визуальный редактор для редактирования подробного текста
-                                            "ELEMENT_ASSOC" => "CREATED_BY",    // Привязка к пользователю
-                                            "FORM_ID" => "topMainForm",
-                                            "GROUPS" => array(    // Группы пользователей, имеющие право на добавление/редактирование
-                                                0 => "2",
-                                            ),
-                                            "IBLOCK_ID" => "2",    // Инфо-блок
-                                            "IBLOCK_TYPE" => "system",    // Тип инфо-блока
-                                            "LEVEL_LAST" => "Y",    // Разрешить добавление только на последний уровень рубрикатора
-                                            "LIST_URL" => "",    // Страница со списком своих элементов
-                                            "MAX_FILE_SIZE" => "0",    // Максимальный размер загружаемых файлов, байт (0 - не ограничивать)
-                                            "MAX_LEVELS" => "100000",    // Ограничить кол-во рубрик, в которые можно добавлять элемент
-                                            "MAX_USER_ENTRIES" => "100000",    // Ограничить кол-во элементов для одного пользователя
-                                            "PREVIEW_TEXT_USE_HTML_EDITOR" => "N",    // Использовать визуальный редактор для редактирования текста анонса
-                                            "PROPERTY_CODES" => array(    // Свойства, выводимые на редактирование
-                                                0 => "1",
-                                                1 => "2",
-                                                //2 => "8",
-                                                3 => "NAME",
-                                                //4 => "PREVIEW_TEXT",
-                                            ),
-                                            "PROPERTY_CODES_REQUIRED" => array(    // Свойства, обязательные для заполнения
-                                                //0 => "NAME",
-                                            ),
-                                            "RESIZE_IMAGES" => "N",    // Использовать настройки инфоблока для обработки изображений
-                                            "SEF_MODE" => "N",    // Включить поддержку ЧПУ
-                                            "STATUS" => "ANY",    // Редактирование возможно
-                                            "STATUS_NEW" => "N",    // Деактивировать элемент
-                                            "USER_MESSAGE_ADD" => "",    // Сообщение об успешном добавлении
-                                            "USER_MESSAGE_EDIT" => "",    // Сообщение об успешном сохранении
-                                            "USE_CAPTCHA" => "N",    // Использовать CAPTCHA
-                                        )
-                                    ); ?>
-                                </div>
-                            </div>
-                        </div>
-
-                    <? elseif (PAGE == 'TEXT' || PAGE == 'CONTANER') : ?>
-
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:breadcrumb",
-                            ".default",
-                            array(),
-                            false
-                        ); ?>
-
-                        <? $APPLICATION->ShowViewContent("page_image") ?>
-                        <div class="contaner">
-                            <? $APPLICATION->ShowViewContent("appearance") ?>
-
-                            <h1 class="page-title">
-                                <span><? $APPLICATION->ShowTitle(false) ?></span>
-                            </h1>
-                        </div>
-                        <div class="contaner <?= defined("BACKGROUND") ? BACKGROUND : ''; ?>">
-                            <? if (PAGE == 'TEXT') : ?>
-                                <?
-                                $APPLICATION->IncludeFile("/includes/sub-menu.php", array(), array(
-                                    "MODE"      => "text",                                           // будет редактировать в веб-редакторе
-                                    "NAME"      => "текст",      // текст всплывающей подсказки на иконке
-                                    "TEMPLATE"  => "include.php",                    // имя шаблона для нового файла
-                                    'SHOW_BORDER' => false
-                                ));
-                                ?>
-                                <div class="text">
-                                    <div class="text-page">
-                                    <? endif; ?>
-
-                                <? endif; ?>
-                            <? endif; ?>
+                <? endif ?>
