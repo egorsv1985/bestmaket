@@ -1,1 +1,1 @@
-<div class="title">Посмотрите наши работы они впечатляют</div>
+<div class="title fs-64 text-primary fw-300">Посмотрите наши работы они впечатляют</div>

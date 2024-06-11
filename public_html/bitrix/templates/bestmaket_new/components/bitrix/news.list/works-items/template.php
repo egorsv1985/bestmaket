@@ -12,10 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 // print_r($arResult);
-// Подключаем модуль инфоблоков
-// if (!\Bitrix\Main\Loader::includeModule('iblock')) {
-// 	return;
-// }
+
 
 
 $sectionNames = [];
@@ -44,9 +41,13 @@ foreach ($arResult["ITEMS"] as &$arItem) {
 }
 unset($arItem);
 ?>
-<div class="works-items">
+<div class="works-items ">
 
-	<? foreach ($arResult["ITEMS"] as $key => $arItem) : ?>
+	<?
+	
+	foreach ($arResult["ITEMS"] as $key => $arItem) :
+		
+	?>
 		<?
 		$this->AddEditAction($arItem['ID'] . '-item', $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'] . '-item', $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -55,21 +56,20 @@ unset($arItem);
 
 
 
-		<div class="work-item item<?= $key++; ?>" id="<?= $this->GetEditAreaId($arItem['ID'] . '-item'); ?>">
-			<a href="<?= $arItem['PROPERTIES']['LINK']['VALUE']; ?>" style="background-image: url('<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>');">
-				<div class="bg">
-					<div class="title">
-						<?= $arItem['NAME']; ?>
+		<div class="work-item portfolio__item item<?= $key++; ?>" id="<?= $this->GetEditAreaId($arItem['ID'] . '-item'); ?>">
+			<a href="<?= $arItem['DETAIL_PAGE_URL']; ?>">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="">
 					</div>
-					<div class="title">
-						<?= $arItem['SECTION_NAME']; ?>
+					<div class="portfolio__content mb-5 d-flex ">
+						<div class="portfolio__num "><?= $key++ ?></div>
+						<div class="portfolio__text "><?= $arItem['NAME']; ?></div>
 					</div>
+					<div class="portfolio__title "><?= $arItem['SECTION_NAME']; ?></div>
 				</div>
 			</a>
 		</div>
-
-
-
 	<? endforeach; ?>
-
 </div>
