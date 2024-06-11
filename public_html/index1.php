@@ -9,67 +9,195 @@ $APPLICATION->SetTitle("Главная");
 	<div class="blur-overlay"></div>
 	<div class="main__fon-text text-secondary position-absolute text-nowrap">Макетная мастерская</div>
 	<div class="container">
-		<h1 class="text-center fs-32">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
+		<h1 class="text-center fs-32 mb-5">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
 		</h1>
-		<div class="main__slider slider">
-			<div class=" slider__item position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
 
-			</div>
-			<div class=" slider__item position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
-
-			</div>
+		<div class="main-slider position-relative mb-5">
+			<ul class="slides">
+				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				</li>
+				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				</li>
+				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				</li>
+				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				</li>
+			</ul>
 		</div>
 		<div class=" slider__controls-btns"></div>
-		<h2 class="text-center fs-56 fw-500">Сделаем ваш макет точно по ТЗ</h2>
+		<h2 class="text-center fs-56 fw-600 text-uppercase">Сделаем ваш макет точно по ТЗ</h2>
 		<p class="text-center fs-46">даже если нет чертежей и сроки 🔥"горят"</p>
 	</div>
 </section>
-<div class="main-top">
-	<div class="contaner">
-		<div class="content">
-			<div class="title">
-				<strong>СОЗДАЕМ</strong>
-				В СРОК ОТ 3-Х ДНЕЙ,<br>
-				даже если нет чертежей и сроки "горят"
-				<div class="clear"></div>
-			</div>
-			<div class="items">
-				<div class="item item1">
-					<div class="title-item">
-						Макеты
+<section class="portfolio">
+	<div class="container">
+		<?
+		$APPLICATION->IncludeFile("/includes/works-info-new.php", array(), array(
+			'NAME' => 'текст',
+			'MODE' => 'text'
+		));
+		?>
+		<ul class="flex-wrap gap-3 d-flex portfolio__list">
+			<li class="px-3 py-2 active "><a href="#" class="">Архитектурные макеты</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Ландшафтные макеты</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Макеты оборудования</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Промышленные макеты</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Макеты оборудования</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Интерьерные макеты</a></li>
+			<li class="px-3 py-2 "><a href="#" class="">Интерактивные макеты</a></li>
+		</ul>
+		<div class="portfolio__grid gap-4">
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio1.png" alt="" class="">
 					</div>
-					<div class="btn">
-						<a href="/portfolio/">Посмотреть работы</a>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">01</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
 					</div>
-				</div>
-				<div class="item item2">
-					<div class="title-item">
-						<strong>3D</strong>
-						АНИМАЦИЮ
-					</div>
-					<div class="btn">
-						<a href="/portfolio/3d-animatsiya/">Посмотреть работы</a>
-					</div>
-				</div>
-				<div class="item item3">
-					<div class="title-item">
-						<strong>3D</strong>
-						ВИЗУАЛИЗАЦИЮ
-					</div>
-					<div class="btn">
-						<a href="/portfolio/3d-vizualizatsiya/">Посмотреть работы</a>
-					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
 				</div>
 			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio2.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">02</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item active">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio3.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">03</div>
+						<div class="portfolio__text">Макет топливно заправочного комплекса для самолетов</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio1.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">04</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio2.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">05</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio3.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">06</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio1.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">07</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio2.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">08</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio3.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">09</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="portfolio__box d-flex flex-column">
+
+					<div class="portfolio__box-img">
+						<img src="./images/portfolio1.png" alt="" class="">
+					</div>
+					<div class="portfolio__content mb-5 d-flex ">
+
+						<div class="portfolio__num fs-64">10</div>
+						<div class="portfolio__text">Макет остановки на Невском проспекте</div>
+					</div>
+					<div class="portfolio__title text-primary">Архитектурный макет</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
-</div>
+</section>
+
 
 <div class="works-main">
-	<div class="contaner">
+	<div class="container">
 		<div class="works-info">
 			<?
-			$APPLICATION->IncludeFile("/includes/works-info.php", array(), array(
+			$APPLICATION->IncludeFile("/includes/works-info-new.php", array(), array(
 				'NAME' => 'текст',
 				'MODE' => 'text'
 			));
@@ -77,7 +205,7 @@ $APPLICATION->SetTitle("Главная");
 		</div>
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:catalog.section.list",
-			"works-tabs",
+			"works-tabs-new",
 			array(
 				"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
 				"CACHE_GROUPS" => "Y",	// Учитывать права доступа

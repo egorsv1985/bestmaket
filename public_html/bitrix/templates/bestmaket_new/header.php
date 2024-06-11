@@ -32,7 +32,7 @@ global $ERROR_404;
     <!-- <? $APPLICATION->SetAdditionalCSS('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;display=swap&amp;subset=cyrillic', true); ?> -->
 
 
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.8.2.min.js"); ?>
+    <!-- <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.8.2.min.js"); ?> -->
     <? $APPLICATION->AddHeadScript("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.fancybox-1.3.4.js"); ?>
     <? $APPLICATION->AddHeadScript("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"); ?>
@@ -40,9 +40,9 @@ global $ERROR_404;
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.inputmask.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/autoresize.jquery.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/bootstrap.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/script.js"); ?>
     
     <? $APPLICATION->SetAdditionalCSS("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"); ?>
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/script.js"); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/normalize.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery.fancybox-1.3.4.css'); ?>

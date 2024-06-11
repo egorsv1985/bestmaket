@@ -232,7 +232,15 @@ document.location.replace("/thank.php");
 		directionNav: true,
 		controlsContainer: $(".slider-large .controls .contaner"),
     controlNav: false
-	});  
+	}); 
+	$('.main-slider').flexslider({
+		animation: 'slide',
+		directionNav: true,
+		controlsContainer: $('.main-slider .slider__controls-btns'),
+		controlNav: true,
+		touch: true
+	}) 
+	
 	$('.main__slider').slick({
 		infinite: true,
 		speed: 500,
