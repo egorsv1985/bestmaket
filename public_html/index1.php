@@ -30,14 +30,14 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="portfolio py-5">
 	<div class="container">
-		
-			<?
-			$APPLICATION->IncludeFile("/includes/works-info-new.php", array(), array(
-				'NAME' => 'текст',
-				'MODE' => 'text'
-			));
-			?>
-		
+
+		<?
+		$APPLICATION->IncludeFile("/includes/works-info-new.php", array(), array(
+			'NAME' => 'текст',
+			'MODE' => 'text'
+		));
+		?>
+
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:catalog.section.list",
 			"works-tabs-new",
@@ -71,7 +71,40 @@ $APPLICATION->SetTitle("Главная");
 		); ?>
 	</div>
 </section>
+<section class="sample">
+	<div class="container">
+		<div class="d-flex">
 
+			<div class="sample__description">
+				<h2 class="sample__title fs-48 fw-500">Сделаем 3D эскиз</h2>
+				<p class="fs-48 fw-500 ">чтобы вы знали каким будет ваш макет</p>
+				<div class="sample__box-img">
+					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" alt="" class="">
+
+					<!-- <img src="./images/eskiz.png" alt="" class=""> -->
+				</div>
+				<div class="sample__content d-flex justify-content-between">
+					<div class="d-flex flex-column">
+						<div class="fs-40">Эскиз</div>
+						<div class="fs-25 text-primary">До</div>
+					</div>
+					<div class="d-flex flex-column">
+						<div class="fs-40">Макет</div>
+						<div class="fs-25 text-primary">После</div>
+					</div>
+				</div>
+			</div>
+			<div class="sample__links">
+				<div class="fs-25">Напишите в мессенджер, обсудим проект</div>
+				<div class="d-flex flex-column">
+
+					<a href="" class="sample__link fs-30 sample__link--tg">Написать в Telegram</a>
+					<a href="" class="sample__link fs-30 sample__link--whatsapp">Написать в WhatsApp</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>

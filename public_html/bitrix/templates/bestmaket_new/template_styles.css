@@ -5116,3 +5116,15 @@ color: #167ec2;
 	width: 100%;
 	height: auto;
 }
+.sample__description {
+  width: 47%;
+}
+.sample__links {
+  width: 47%;
+}
+.sample__link--tg {
+  color: #1B92D1;
+}
+.sample__link--whatsapp {
+  color: #26CE37;
+}
