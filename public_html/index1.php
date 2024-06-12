@@ -71,14 +71,13 @@ $APPLICATION->SetTitle("Главная");
 		); ?>
 	</div>
 </section>
-<section class="sample">
+<section class="sample py-5">
 	<div class="container">
-		<div class="d-flex">
-
-			<div class="sample__description">
-				<h2 class="sample__title fs-48 fw-500">Сделаем 3D эскиз</h2>
-				<p class="fs-48 fw-500 ">чтобы вы знали каким будет ваш макет</p>
-				<div class="sample__box-img">
+		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Сделаем 3D эскиз</h2>
+		<p class="fs-48 fw-600 sample__desc mb-4">чтобы вы знали каким будет ваш макет</p>
+		<div class="d-flex sample__box">
+			<div class="sample__box-content">
+				<div class="sample__box-img mb-4">
 					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" alt="" class="">
 
 					<!-- <img src="./images/eskiz.png" alt="" class=""> -->
@@ -94,12 +93,12 @@ $APPLICATION->SetTitle("Главная");
 					</div>
 				</div>
 			</div>
-			<div class="sample__links">
-				<div class="fs-25">Напишите в мессенджер, обсудим проект</div>
-				<div class="d-flex flex-column">
+			<div class="sample__links position-relative d-flex flex-column ">
+				<div class="fs-25 sample__mess">Напишите в мессенджер, обсудим проект</div>
+				<div class="d-flex flex-column gap-5">
 
-					<a href="" class="sample__link fs-30 sample__link--tg">Написать в Telegram</a>
-					<a href="" class="sample__link fs-30 sample__link--whatsapp">Написать в WhatsApp</a>
+					<a href="" class="sample__link d-inline-block fs-30 sample__link--tg position-relative ">Написать в Telegram</a>
+					<a href="" class="sample__link d-inline-block fs-30 sample__link--whatsapp position-relative ">Написать в WhatsApp</a>
 				</div>
 			</div>
 		</div>
