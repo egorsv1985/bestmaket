@@ -5144,9 +5144,21 @@ input:focus {
 }
 .sample__link--tg {
 	color: #1b92d1;
-}
-.sample__link--whatsapp {
-	color: #26ce37;
+	background: url("images/telegram.svg") no-repeat right center / 37px 38px;
+	}
+	.sample__link--whatsapp {
+		color: #26ce37;
+		
+		background: url("images/whatsapp.svg") no-repeat right center / 37px;
+		}
+		.sample__link--tg::before {
+			background-color: #1b92d1;
+		
+			}
+			.sample__link--whatsapp::before {
+		background-color: #26ce37;
+		
+		
 }
 .sample__title {
 	line-height: 1;
@@ -5184,8 +5196,8 @@ input:focus {
 		display: block;
 		position: absolute;
 		left: 0;
-		right: 0;
-		background-color: #1b92d1;
-		height: 2px;
-		bottom: 0;
+		right: 27%;
+    
+    height: 2px;
+    bottom: -6px;
 }
