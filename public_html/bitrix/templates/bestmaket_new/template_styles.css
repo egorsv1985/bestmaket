@@ -5144,36 +5144,53 @@ input:focus {
 }
 .sample__link--tg {
 	color: #1b92d1;
-	background: url("images/telegram.svg") no-repeat right center / 37px 38px;
 	}
 	.sample__link--whatsapp {
 		color: #26ce37;
 		
-		background: url("images/whatsapp.svg") no-repeat right center / 37px;
 		}
 		.sample__link--tg::before {
 			background-color: #1b92d1;
-		
 			}
 			.sample__link--whatsapp::before {
-		background-color: #26ce37;
-		
-		
-}
+				background-color: #26ce37;
+				}
+				.sample__link--tg::after {
+				background: url('images/telegram.svg') no-repeat center / cover;
+				content: "";
+				display: block;
+				position: absolute;
+				right: 15px;
+				transform: translateY(-50%);
+				top: 50%;
+				width: 37px;
+				height: 38px;
+				}
+				.sample__link--whatsapp::after {
+		background: url('images/whatsapp.svg') no-repeat center / cover;
+			content: "";
+			display: block;
+			position: absolute;
+			right: 15px;
+			transform: translateY(-50%);
+			top: 50%;
+			width: 37px;
+			height: 37px;
+	}
+
 .sample__title {
 	line-height: 1;
 }
-.sample__title::before{
-		content: "";
-		display: block;
-		background-color: rgba(141, 206, 38, 0.8);
-		z-index: -1;
-		position: absolute;
-    left: 5px;
-    right: -10px;
-    bottom: 10px;
-    height: 33%;
-		
+.sample__title::before {
+	content: '';
+	display: block;
+	background-color: rgba(141, 206, 38, 0.8);
+	z-index: -1;
+	position: absolute;
+	left: 5px;
+	right: -10px;
+	bottom: 10px;
+	height: 33%;
 }
 .sample__desc {
 	line-height: 1;
@@ -5191,13 +5208,13 @@ input:focus {
 	line-height: 87%;
 	text-decoration: none;
 }
-.sample__link::before{
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		right: 27%;
-    
-    height: 2px;
-    bottom: -6px;
+.sample__link::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 27%;
+
+	height: 2px;
+	bottom: -6px;
 }
