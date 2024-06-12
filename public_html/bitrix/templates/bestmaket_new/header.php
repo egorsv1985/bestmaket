@@ -40,13 +40,18 @@ global $ERROR_404;
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.inputmask.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/autoresize.jquery.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/bootstrap.js"); ?>
-    
-    <? $APPLICATION->SetAdditionalCSS("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"); ?>
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.event.move.js"); ?>
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.twentytwenty.js"); ?>
+    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-ui.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/script.js"); ?>
-    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap.css'); ?>
+
+    <? $APPLICATION->SetAdditionalCSS("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/normalize.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery.fancybox-1.3.4.css'); ?>
-
+    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery-ui.min.css'); ?>
+    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/twentytwenty.css'); ?>
+    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap.css'); ?>
+    
     <? /* Карта в футере */ ?>
     <?
     //$APPLICATION->AddHeadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IG-mXqYnNwnQDFvhVi17zNT_zsTrBxY&callback=initMap");

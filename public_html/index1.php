@@ -77,11 +77,28 @@ $APPLICATION->SetTitle("Главная");
 		<p class="fs-48 fw-600 sample__desc mb-4">чтобы вы знали каким будет ваш макет</p>
 		<div class="d-flex sample__box">
 			<div class="sample__box-content">
-				<div class="sample__box-img mb-4">
-					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" alt="" class="">
 
-					<!-- <img src="./images/eskiz.png" alt="" class=""> -->
+
+				<div class="sl-container">
+					<div class="view view-after">
+						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
+					</div>
+					<div class="view view-before">
+						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
+					</div>
+					<div class="dragme">
+						<div class="dr-circle">
+							
+							<svg class=" position-absolute svg-left"  width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M-1.74846e-07 4L3.75 0.535898L3.75 7.4641L-1.74846e-07 4Z" fill="#525252" />
+							</svg>
+							<svg class=" position-absolute svg-right" width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 4L0.249999 7.4641L0.249999 0.535898L4 4Z" fill="#525252" />
+							</svg>
+						</div>
+					</div>
 				</div>
+				<!-- <img src="./images/eskiz.png" alt="" class=""> -->
 				<div class="sample__content d-flex justify-content-between">
 					<div class="d-flex flex-column">
 						<div class="fs-40">Эскиз</div>
@@ -102,6 +119,7 @@ $APPLICATION->SetTitle("Главная");
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 </section>
 <?

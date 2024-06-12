@@ -5144,39 +5144,38 @@ input:focus {
 }
 .sample__link--tg {
 	color: #1b92d1;
-	}
-	.sample__link--whatsapp {
-		color: #26ce37;
-		
-		}
-		.sample__link--tg::before {
-			background-color: #1b92d1;
-			}
-			.sample__link--whatsapp::before {
-				background-color: #26ce37;
-				}
-				.sample__link--tg::after {
-				background: url('images/telegram.svg') no-repeat center / cover;
-				content: "";
-				display: block;
-				position: absolute;
-				right: 15px;
-				transform: translateY(-50%);
-				top: 50%;
-				width: 37px;
-				height: 38px;
-				}
-				.sample__link--whatsapp::after {
-		background: url('images/whatsapp.svg') no-repeat center / cover;
-			content: "";
-			display: block;
-			position: absolute;
-			right: 15px;
-			transform: translateY(-50%);
-			top: 50%;
-			width: 37px;
-			height: 37px;
-	}
+}
+.sample__link--whatsapp {
+	color: #26ce37;
+}
+.sample__link--tg::before {
+	background-color: #1b92d1;
+}
+.sample__link--whatsapp::before {
+	background-color: #26ce37;
+}
+.sample__link--tg::after {
+	background: url('images/telegram.svg') no-repeat center / cover;
+	content: '';
+	display: block;
+	position: absolute;
+	right: 15px;
+	transform: translateY(-50%);
+	top: 50%;
+	width: 37px;
+	height: 38px;
+}
+.sample__link--whatsapp::after {
+	background: url('images/whatsapp.svg') no-repeat center / cover;
+	content: '';
+	display: block;
+	position: absolute;
+	right: 15px;
+	transform: translateY(-50%);
+	top: 50%;
+	width: 37px;
+	height: 37px;
+}
 
 .sample__title {
 	line-height: 1;
@@ -5217,4 +5216,78 @@ input:focus {
 
 	height: 2px;
 	bottom: -6px;
+}
+.sl-container {
+	overflow: hidden;
+	position: relative;
+	width: 640px;
+	height: 420px;
+	box-sizing: border-box;
+}
+.sl-container .view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.sl-container .view img {
+	width: 640px;
+	max-width: 640px;
+}
+.sl-container .view-before {
+	z-index: 100;
+}
+.sl-container .view-after {
+	width: 100px;
+	z-index: 200;
+}
+.sl-container .dragme {
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	top: 0px;
+	left: 100px;
+	background-color: #fff;
+	cursor: pointer;
+	z-index: 300;
+}
+.sl-container .dr-circle {
+	position: absolute;
+	top: calc(50% - 20px);
+	left: -15px;
+	border-radius: 100%;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	z-index: 300;
+}
+.sl-container .dr-circle i {
+	line-height: 40px;
+	font-size: 20px;
+	color: #337ab7;
+	font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+	.sl-container {
+		width: 320px;
+		height: 210px;
+	}
+	.sl-container .view img {
+		width: 320px;
+		max-width: 320px;
+	}
+}
+.dr-circle svg {
+	top: 50%;
+	transform: translateY(-50%);
+	
+}
+.svg-left{
+	left: 25%;
+}
+.svg-right{
+	right: 25%;
 }
