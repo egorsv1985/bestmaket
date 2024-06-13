@@ -435,6 +435,56 @@ $APPLICATION->SetTitle("Главная");
 		</div>
 	</div>
 </section>
+<? if ($USER->IsAdmin() || true) : ?>
+	<div class="main-makets py-5">
+		<div class="container">
+			<div class="text">
+				<div class="text-page">
+					<div class="title">
+						Виды макетов
+					</div>
+					<div class="layouts-items">
+						<?
+						$arFilter = array('IBLOCK_ID' => 13, 'ACTIVE' => 'Y');
+						$rsSections = CIBlockSection::GetList(array('SORT' => 'ASC'), $arFilter);
+						$key = 0;
+						while ($arSection = $rsSections->Fetch()) : ?>
+							<div class="layouts-item<?= (!($key % 3) ? ' clear' : '') ?>" style="background-image:url('<?= CFile::GetPath($arSection['PICTURE']); ?>');" id="section-<?= $arSection['ID']; ?>">
+								<div class="name"><?= $arSection['NAME']; ?></div>
+								<ul>
+									<?
+									$arFilter = array(
+										"IBLOCK_ID" => $arSection['IBLOCK_ID'],
+										"SECTION_ID" => $arSection['ID'],
+										"ACTIVE" => "Y",
+									);
+									$rsElements = CIBlockElement::GetList(array("SORT" => "ASC"), $arFilter, false);
+									$keyrow = 0;
+									while ($arElements = $rsElements->GetNext()) :
+										$keyrow++;
+										if ($keyrow == 3) : ?>
+											<li class="small">
+												<a href="#" class="display-all">Показать все</a>
+											</li>
+										<? endif; ?>
+										<li class="<?= ($keyrow > 2) ? 'none' : '' ?>">
+											<a href="<?= $arElements['DETAIL_PAGE_URL']; ?>" id="elements-<?= $arElements['ID']; ?>">
+												<?= $arElements['NAME']; ?>
+											</a>
+										</li>
+									<? endwhile; ?>
+								</ul>
+							</div>
+						<?
+							$key++;
+						endwhile; ?>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<? endif; ?>
 <section class="why-work py-5">
 	<div class="container">
 		<h2 class="fs-64">Почему Вам стоит работать с нами</h2>
