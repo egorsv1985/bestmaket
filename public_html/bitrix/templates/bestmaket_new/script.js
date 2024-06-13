@@ -214,10 +214,11 @@ document.location.replace("/thank.php");
 	
 	
 	$('.clients-slider').flexslider({
-		animation: "slide",
+		animation: 'slide',
 		directionNav: true,
-    controlNav: true
-	});
+		controlNav: true,
+		slideshow: false
+	})
 	
 	
 	

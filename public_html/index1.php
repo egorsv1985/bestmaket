@@ -206,7 +206,7 @@ $APPLICATION->SetTitle("Главная");
 			));
 			?>
 		</div>
-		
+
 		<div class="form-container">
 			<? $APPLICATION->IncludeComponent(
 				"tkk:infoportal.element.add.form",
@@ -261,10 +261,10 @@ $APPLICATION->SetTitle("Главная");
 		</div>
 	</div>
 </section>
-<div class="clients-main">
-	<div class="contaner">
+<div class="clients-main py-5">
+	<div class="container">
 		<div class="large-title">
-			Клиенты о нас <small>Что говорят люди, которые уже работают с нами?</small>
+			Отзывы. Клиенты о нашей работе <small>Что говорят люди, которые уже работают с нами?</small>
 		</div>
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:news.list",
