@@ -370,73 +370,71 @@ $APPLICATION->SetTitle("Главная");
 		); ?>
 	</div>
 </div>
-<div class="request-calc-2">
-	<div class="contaner">
-		<div class="info">
-			<div class="title">
-				<?
-				$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
-					'NAME' => 'текст',
-					'MODE' => 'html'
-				));
-				?>
-			</div>
-
+<section class="request-calc-2 py-5 gray">
+	<div class="container">
+		<div class="title fs-64 mb-5">
+			<?
+			$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
+				'NAME' => 'текст',
+				'MODE' => 'html'
+			));
+			?>
 		</div>
-		<div class="form-contaner">
+
+		<div class="form-container">
 			<? $APPLICATION->IncludeComponent(
 				"tkk:infoportal.element.add.form",
 				"form-small",
 				array(
 					"COMPONENT_TEMPLATE" => "form-small",
-					"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",	// * дата начала *
-					"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",	// * дата завершения *
-					"CUSTOM_TITLE_DETAIL_PICTURE" => "",	// * подробная картинка *
-					"CUSTOM_TITLE_DETAIL_TEXT" => "",	// * подробный текст *
-					"CUSTOM_TITLE_IBLOCK_SECTION" => "",	// * раздел инфоблока *
-					"CUSTOM_TITLE_NAME" => "Ваше имя",	// * наименование *
-					"CUSTOM_TITLE_PREVIEW_PICTURE" => "",	// * картинка анонса *
-					"CUSTOM_TITLE_PREVIEW_TEXT" => "Сообщение",	// * текст анонса *
-					"CUSTOM_TITLE_TAGS" => "",	// * теги *
-					"DEFAULT_INPUT_SIZE" => "30",	// Размер полей ввода
-					"DETAIL_TEXT_USE_HTML_EDITOR" => "N",	// Использовать визуальный редактор для редактирования подробного текста
-					"ELEMENT_ASSOC" => "CREATED_BY",	// Привязка к пользователю
+					"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+					"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+					"CUSTOM_TITLE_DETAIL_PICTURE" => "",
+					"CUSTOM_TITLE_DETAIL_TEXT" => "",
+					"CUSTOM_TITLE_IBLOCK_SECTION" => "",
+					"CUSTOM_TITLE_NAME" => "Ваше имя",
+					"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+					"CUSTOM_TITLE_PREVIEW_TEXT" => "Сообщение",
+					"CUSTOM_TITLE_TAGS" => "",
+					"DEFAULT_INPUT_SIZE" => "30",
+					"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+					"ELEMENT_ASSOC" => "CREATED_BY",
 					"FORM_ID" => "topMainForm",
-					"GROUPS" => array(	// Группы пользователей, имеющие право на добавление/редактирование
+					"GROUPS" => array(
 						0 => "2",
 					),
-					"IBLOCK_ID" => "2",	// Инфо-блок
-					"IBLOCK_TYPE" => "system",	// Тип инфо-блока
-					"LEVEL_LAST" => "Y",	// Разрешить добавление только на последний уровень рубрикатора
-					"LIST_URL" => "",	// Страница со списком своих элементов
-					"MAX_FILE_SIZE" => "0",	// Максимальный размер загружаемых файлов, байт (0 - не ограничивать)
-					"MAX_LEVELS" => "100000",	// Ограничить кол-во рубрик, в которые можно добавлять элемент
-					"MAX_USER_ENTRIES" => "100000",	// Ограничить кол-во элементов для одного пользователя
-					"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",	// Использовать визуальный редактор для редактирования текста анонса
-					"PROPERTY_CODES" => array(	// Свойства, выводимые на редактирование
+					"IBLOCK_ID" => "2",
+					"IBLOCK_TYPE" => "system",
+					"LEVEL_LAST" => "Y",
+					"LIST_URL" => "",
+					"MAX_FILE_SIZE" => "0",
+					"MAX_LEVELS" => "100000",
+					"MAX_USER_ENTRIES" => "100000",
+					"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+					"PROPERTY_CODES" => array(
 						0 => "1",
 						1 => "2",
-						//2 => "8",
+						2 => "8",
 						3 => "NAME",
-						//4 => "PREVIEW_TEXT",
 					),
-					"PROPERTY_CODES_REQUIRED" => array(	// Свойства, обязательные для заполнения
-						//0 => "NAME",
+					"PROPERTY_CODES_REQUIRED" => array(
+						0 => "1",
+						1 => "8",
+						2 => "NAME",
 					),
-					"RESIZE_IMAGES" => "N",	// Использовать настройки инфоблока для обработки изображений
-					"SEF_MODE" => "N",	// Включить поддержку ЧПУ
-					"STATUS" => "ANY",	// Редактирование возможно
-					"STATUS_NEW" => "N",	// Деактивировать элемент
-					"USER_MESSAGE_ADD" => "",	// Сообщение об успешном добавлении
-					"USER_MESSAGE_EDIT" => "",	// Сообщение об успешном сохранении
-					"USE_CAPTCHA" => "N",	// Использовать CAPTCHA
-				)
+					"RESIZE_IMAGES" => "N",
+					"SEF_MODE" => "N",
+					"STATUS" => "ANY",
+					"STATUS_NEW" => "N",
+					"USER_MESSAGE_ADD" => "",
+					"USER_MESSAGE_EDIT" => "",
+					"USE_CAPTCHA" => "N"
+				),
+				false
 			); ?>
 		</div>
-		<div class="clear">
-		</div>
 	</div>
-</div>
+</section>
 <section class="why-work py-5">
 	<div class="container">
 		<h2 class="fs-64">Почему Вам стоит работать с нами</h2>
