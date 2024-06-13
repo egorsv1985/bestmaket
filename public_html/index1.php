@@ -73,8 +73,8 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="sample py-5">
 	<div class="container">
-		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Сделаем 3D эскиз</h2>
-		<p class="fs-48 fw-600 sample__desc mb-4">чтобы вы знали каким будет ваш макет</p>
+		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
+		<p class="fs-48 fw-600 sample__desc mb-4">чтобы увидеть каким будет макет еще на старте работ</p>
 		<div class="d-flex sample__box">
 			<div class="sample__box-content">
 
@@ -443,15 +443,18 @@ $APPLICATION->SetTitle("Главная");
 					<div class="title">
 						Виды макетов
 					</div>
-					<div class="layouts-items">
+					<div class="layouts-items d-flex flex-wrap ">
 						<?
 						$arFilter = array('IBLOCK_ID' => 13, 'ACTIVE' => 'Y');
 						$rsSections = CIBlockSection::GetList(array('SORT' => 'ASC'), $arFilter);
 						$key = 0;
 						while ($arSection = $rsSections->Fetch()) : ?>
-							<div class="layouts-item<?= (!($key % 3) ? ' clear' : '') ?>" style="background-image:url('<?= CFile::GetPath($arSection['PICTURE']); ?>');" id="section-<?= $arSection['ID']; ?>">
-								<div class="name"><?= $arSection['NAME']; ?></div>
-								<ul>
+							<div class="layouts-item py-4 d-flex flex-column position-relative" id="section-<?= $arSection['ID']; ?>">
+								<div class="mb-4">
+									<img src="<?= CFile::GetPath($arSection['PICTURE']); ?>" width="35" height="35" alt="" class="">
+								</div>
+								<div class="name mb-4"><?= $arSection['NAME'];  ?></div>
+								<ul class="item-list">
 									<?
 									$arFilter = array(
 										"IBLOCK_ID" => $arSection['IBLOCK_ID'],
@@ -463,8 +466,8 @@ $APPLICATION->SetTitle("Главная");
 									while ($arElements = $rsElements->GetNext()) :
 										$keyrow++;
 										if ($keyrow == 3) : ?>
-											<li class="small">
-												<a href="#" class="display-all">Показать все</a>
+											<li class="small ">
+												<button class="display-all" aria-label="показать все"></button>
 											</li>
 										<? endif; ?>
 										<li class="<?= ($keyrow > 2) ? 'none' : '' ?>">
@@ -478,7 +481,7 @@ $APPLICATION->SetTitle("Главная");
 						<?
 							$key++;
 						endwhile; ?>
-						<div class="clear"></div>
+
 					</div>
 				</div>
 			</div>
@@ -487,7 +490,7 @@ $APPLICATION->SetTitle("Главная");
 <? endif; ?>
 <section class="why-work py-5">
 	<div class="container">
-		<h2 class="fs-64">Почему Вам стоит работать с нами</h2>
+		<h2 class="fs-64 mb-5">Почему Вам стоит работать с нами</h2>
 		<div class="why-work__content">
 			<div class="fs-24 why-work__text why-work__text--left px-4 py-5"><strong>Макетная мастерская</strong> “Бэст
 				макет”. Мы
@@ -512,9 +515,9 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="instruments py-5">
 	<div class="container">
-		<h2 class="fs-36">Какими инструментами наша макетная <span>мастерская</span> <span>решит</span> Вашу задачу?
+		<h2 class="fs-36 instruments__title fw-300 mb-5 ">Какими инструментами наша макетная <span>мастерская</span> <span>решит</span> Вашу задачу?
 		</h2>
-		<ul class="fs-24 d-flex flex-column">
+		<ul class="fs-24 d-flex flex-column  instruments__list">
 			<li>Опыт. 9 лет создаем макеты. Реализовали более 200 проектов. </li>
 			<li>Отлаженная технология удаленного согласования и отчетности при разработке архитектурного макета.</li>
 			<li>Производство макета с учетом мельчайших деталей проекта.</li>
@@ -531,7 +534,7 @@ $APPLICATION->SetTitle("Главная");
 	<div class="container">
 		<div class="advantages__content d-flex gap-5">
 			<div class="advantages__box-img">
-				<img src="./images/advantages/advantage.png" alt="" class="">
+				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/advantage.png" alt="" class="">
 			</div>
 			<div class="advantages__box-text">
 				<h2 class="fs-36 mb-5">Ещё 3 очевидных преимущества</h2>

@@ -4,12 +4,20 @@ $(window).load(function() {
 });
 $(document).ready(function() {
 
-	$('.layouts-item ul li .display-all').click(function() {
-		$(this).parents('ul').find('li.none').slideDown();
-		$(this).hide();
-		return false;
-
-	});
+	$('.layouts-item ul li .display-all').click(function () {
+		$(this).toggleClass('rotate')
+		$(this)
+			.parents('ul')
+			.find('li.none, li.show')
+			.each(function () {
+				if ($(this).hasClass('show')) {
+					$(this).removeClass('show').addClass('none')
+				} else {
+					$(this).removeClass('none').addClass('show')
+				}
+			})
+		return false
+	})
 
 
 	$('.pseudo-select .select').live('click',function(){
