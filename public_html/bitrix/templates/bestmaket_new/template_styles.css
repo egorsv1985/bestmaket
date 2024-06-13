@@ -5664,3 +5664,11 @@ input:focus {
   left: 50%;
   transform: translateX(-50%);
 }
+.main-contacts{
+	background-color:#1b92d1;
+}
+.form-main.contact {
+    padding: 0;
+    float: none;
+    width: inherit;
+}
