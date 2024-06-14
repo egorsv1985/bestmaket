@@ -21,7 +21,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 <div class="works-tab tabs">
-	<ul class="portfolio__list tabs flex-wrap gap-4 mb-4 d-flex portfolio__list ">
+	<ul class="portfolio__list tabs  gap-4 mb-4 d-flex portfolio__list ">
 		<? foreach ($arResult['SECTIONS'] as $key => &$arSection) : ?>
 
 			<?
@@ -31,7 +31,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 			?>
 
 			<li class="px-3 py-2 <?= ($key == 0 ? 'active ' : ''); ?>item<?= $arSection['ID']; ?>" id="<?= $this->GetEditAreaId($arSection['ID'] . '-item'); ?>">
-				<a href="#" class="fs-20 fw-500">
+				<a href="#" class="fs-20 fw-500 text-nowrap">
 					<?= $arSection['NAME']; ?>
 				</a>
 			</li>

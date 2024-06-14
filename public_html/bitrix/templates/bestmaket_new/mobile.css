@@ -17,9 +17,12 @@
 	padding: 10px 0;
 }
 .header .logo {
-	float: left;
-	max-width: 50%;
-	width: 35%;
+	/* float: left; */
+	max-width: 148px;
+	/* width: 35%; */
+}
+.header .logo img {
+	width: 100%;
 }
 .header .phones {
 	display: block;
@@ -142,37 +145,53 @@
 	margin-bottom: 1em;
 }
 .works-tab {
-	float: none;
-	width: auto;
+	/* float: none; */
+	/* width: auto; */
 }
 .works-tab ul.tabs li {
-	width: auto !important;
-	float: none;
-	margin: 6px 0;
+	/* width: auto !important; */
+	/* float: none; */
+	/* margin: 6px 0; */
 }
 .works-tab ul.tabs a {
-	float: none;
-	display: block;
-	padding: 6px 13px;
+	/* float: none; */
+	/* display: block; */
+	/* padding: 6px 13px; */
 	background: #fff;
+	color: #7c7a7a;
 }
 .works-tab ul.tabs a br {
 	display: none;
 }
 .works-tab ul.tabs .active a {
 	border: none;
-	border: 3px solid #2c80c5;
-	border-width: 0 3px;
-	padding: 6px 10px;
+	color: #167ec2;
+	text-decoration: underline;
+	/* border: 3px solid #2c80c5; */
+	/* border-width: 0 3px; */
+	/* padding: 6px 10px; */
+	}
+	.works-tab ul.tabs {
+		/* width: auto; */
+		/* float: none; */
+		/* padding: 0; */
+		}
+.portfolio__list li.active, .portfolio__list li:hover{
+	background-color: transparent;
+	}
+	.portfolio__list li{
+		border: none;
+		}
+		.portfolio__list li.active, .portfolio__list li:hover a{
+	color: #167ec2;
+	text-decoration: underline;
+	
 }
-.works-tab ul.tabs {
-	width: auto;
-	float: none;
-	padding: 0;
-}
-
 .works-items {
 	padding: 20px 0;
+	    display: flex;
+    overflow-x: scroll;
+    gap: 28px;
 }
 .work-item {
 	float: none;
@@ -316,10 +335,13 @@
 	padding: 10px 15px;
 	margin: 0;
 }
+.clients-list{
+	overflow-x: scroll;
+}
 .clients-list li {
 	float: none;
 	width: auto;
-	padding-left: 130px;
+	padding-left: 20px;
 }
 .form-large .form-item,
 .form-large .file-upload,
@@ -773,4 +795,28 @@
 }
 .main-top .item .btn {
 	padding-bottom: 1em;
+}
+
+.main{
+	padding-top: 42px;
+}
+.main .flex-direction-nav{
+	display: none;
+}
+.main .slides li{
+	height: 142px;
+}
+.main .flex-control-nav.flex-control-paging{
+	margin-top: 48px;
+}
+.portfolio__list{
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+}
+.portfolio .title{
+	max-width: 100%;
+	margin-bottom: 24px;
+}
+.form-green .private .check{
+	max-width: 100%;
 }

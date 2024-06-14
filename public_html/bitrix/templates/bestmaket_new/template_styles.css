@@ -76,7 +76,7 @@ body {
 	/* width: 20%; */
 }
 .header .logo img {
-	/* max-width: 90% !important; */
+	max-width: 182px;
 	/* width: auto !important; */
 	/* height: auto !important; */
 }
@@ -4811,7 +4811,8 @@ input:focus {
 	font-size: 16px;
 }
 .fs-20 {
-	font-size: 20px;
+	--font-size-20: clamp(0.69rem, 1.28vi + 0.43rem, 1.25rem);
+	font-size: var(--font-size-20);
 }
 
 .fs-24 {
@@ -4819,7 +4820,8 @@ input:focus {
 }
 
 .fs-25 {
-	font-size: 25px;
+	--font-size-25: clamp(0.75rem, 1.85vi + 0.38rem, 1.56rem);
+	font-size: var(--font-size-25);
 }
 
 .fs-30 {
@@ -4827,7 +4829,8 @@ input:focus {
 }
 
 .fs-32 {
-	font-size: 32px;
+	--font-size-32: clamp(1.69rem, 0.71vi + 1.55rem, 2rem);
+	font-size: var(--font-size-32);
 }
 
 .fs-36 {
@@ -4835,26 +4838,33 @@ input:focus {
 }
 
 .fs-40 {
-	font-size: 40px;
+	--font-size-40: clamp(1.38rem, 2.56vi + 0.86rem, 2.5rem);
+	font-size: var(--font-size-40);
 }
 
 .fs-46 {
-	font-size: 46px;
+	--font-size-46: clamp(1.75rem, 2.56vi + 1.24rem, 2.88rem);
+	font-size: var(--font-size-46);
 }
 
 .fs-48 {
-	font-size: 48px;
+	--font-size-48: clamp(1.63rem, 3.13vi + 1rem, 3rem);
+	
+		font-size: var(--font-size-48);
 }
 
 .fs-56 {
-	font-size: 56px;
+	--font-size-56: clamp(2rem, 3.41vi + 1.32rem, 3.5rem);
+	font-size: var(--font-size-56);
 }
 
 .fs-64 {
-	font-size: 64px;
+	--font-size-64: clamp(1.63rem, 5.4vi + 0.55rem, 4rem);
+	font-size: var(--font-size-64);
 }
 .fs-72 {
-	font-size: 72px;
+	--font-size-72: clamp(3.63rem, 1.99vi + 3.23rem, 4.5rem);
+	font-size: var(--font-size-72);
 }
 
 .fw-300 {
@@ -5474,7 +5484,7 @@ input:focus {
 	position: relative;
 	z-index: 10;
 	color: #000;
-	font-size: 64px;
+
 	text-transform: none;
 	font-weight: 300;
 	line-height: 1;
@@ -5684,7 +5694,6 @@ transition: transform 0.5s ease;
 	z-index: 10;
 
 	font-weight: 300;
-	font-size: 64px;
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -5800,4 +5809,10 @@ padding-top: 35px;
 .menu-mob{
 	display: none;
 	
+}
+.main .slides li{
+	height: 355px;
+}
+.portfolio__list{
+	flex-wrap: wrap;
 }

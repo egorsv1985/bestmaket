@@ -101,10 +101,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<? endif; ?>
 	<section class="main-contacts mt-5 py-5">
 		<div class="container">
-			<div class="d-flex justify-content-between">
+			<div class="d-flex justify-content-between flex-column flex-lg-row">
 				<div class="main-contacts__box">
 
-					<div class="large-title">
+					<div class="large-title fs-64">
 						Контакты
 					</div>
 
@@ -119,7 +119,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					<div class="schedule">
 						Пн-Пт. с 10.00 до 19.00
 					</div>
-					<div class="d-flex mb-5">
+					<div class="d-flex mb-5 flex-column flex-lg-row">
 						<div class="messenger__text">или напишите в мессенджер</div>
 						<ul class="messenger__list d-flex gap-2">
 							<li>

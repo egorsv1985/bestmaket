@@ -17,7 +17,7 @@ $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 ?>
-<div class="clients-list d-flex">
+<div class="clients-list d-flex flex-column flex-lg-row">
 	<ul class="d-flex">
 		<?
 		foreach ($arResult['SECTIONS'] as $key => &$arSection) :

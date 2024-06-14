@@ -6,27 +6,27 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 
 ?>
-<section class=" main position-relative">
+<section class=" main position-relative ">
 	<div class="blur-overlay"></div>
 	<div class="main__fon-text text-secondary position-absolute text-nowrap">Макетная мастерская</div>
 	<div class="container">
 		<h1 class="text-center fs-32 mb-5">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
 		</h1>
 
-		<div class="main-slider position-relative mb-5">
+		<div class="main-slider position-relative mb-4 mb-lg-4">
 			<ul class="slides">
-				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
 				</li>
-				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
 				</li>
-				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
 				</li>
-				<li class=" position-relative" style="height: 355px; background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
 				</li>
 			</ul>
 		</div>
-		<h2 class="text-center fs-56 fw-600 text-uppercase mb-0">Сделаем ваш макет точно по ТЗ</h2>
-		<p class="text-center fs-46">даже если нет чертежей и сроки 🔥"горят"</p>
+		<h2 class="text-center fs-56 fw-600 text-uppercase mb-0 position-relative">Сделаем ваш макет точно по ТЗ</h2>
+		<p class="text-center fs-46 position-relative">даже если нет чертежей и сроки 🔥"горят"</p>
 	</div>
 </section>
 <section class="portfolio py-5">
@@ -264,7 +264,7 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <div class="clients-main py-5">
 	<div class="container">
-		<div class="large-title">
+		<div class="large-title fs-64">
 			Отзывы. Клиенты о нашей работе <small>Что говорят люди, которые уже работают с нами?</small>
 		</div>
 		<? $APPLICATION->IncludeComponent(

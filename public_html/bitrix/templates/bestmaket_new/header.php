@@ -125,12 +125,12 @@ global $ERROR_404;
                                 <div class="col-6 col-lg-3">
 
                                     <? if ($APPLICATION->GetCurPage() == '/') : ?>
-                                        <span class="logo d-block mw-100 text-center">
-                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class=" h-auto" alt="Макетная мастерская" width="182" height="62">
+                                        <span class="logo d-block  text-center">
+                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class="w-100 h-auto" alt="Макетная мастерская" width="182" height="62">
                                         </span>
                                     <? else : ?>
-                                        <a href="/" class="logo d-block mw-100 text-center">
-                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class=" h-auto" alt="Макетная мастерская" width="182" height="62">
+                                        <a href="/" class="logo d-block text-center">
+                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class="w-100 h-auto" alt="Макетная мастерская" width="182" height="62">
                                         </a>
                                     <? endif; ?>
                                 </div>
