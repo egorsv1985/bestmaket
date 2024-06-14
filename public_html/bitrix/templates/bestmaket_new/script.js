@@ -6,10 +6,11 @@ $(document).ready(function() {
 
 	$('.layouts-item ul li .display-all').click(function () {
 		$(this).toggleClass('rotate')
-		$(this)
+		
 			.parents('ul')
 			.find('li.none, li.show')
 			.each(function () {
+				$(this).slideToggle("slow");
 				if ($(this).hasClass('show')) {
 					$(this).removeClass('show').addClass('none')
 				} else {

@@ -99,7 +99,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			?>
 		<? endif; ?>
 	<? endif; ?>
-	<section class="main-contacts">
+	<section class="main-contacts mt-5 py-5">
 		<div class="container">
 			<div class="d-flex justify-content-between">
 				<div class="main-contacts__box">
@@ -107,22 +107,47 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					<div class="large-title">
 						Контакты
 					</div>
-					<div class="contact-block">
-						<div class="title">Офис в Москве</div>
-						<div class="address">
-							г. Москва<br>
-							Каширское шоссе, д. 24
-						</div>
-						<div class="phone">
-							<a href="tel:+74956470637" class="">+7 (495) 647-06-37</a>
-						</div>
-						<div class="address">
-							Пн-Пт. с 10.00 до 19.00
-						</div>
+
+					<div class="address">
+						199048, г.Санкт-Петербург,
+						13-ая линия В.О., д.72, Арт-Муза.
+					</div>
+					<div class="phone d-flex flex-column">
+						<a href="tel:+78126470637" class="">+7 (812) 647-06-37</a>
+						<a href="tel:88007778504" class="">8 800 777 85 04</a>
+					</div>
+					<div class="schedule">
+						Пн-Пт. с 10.00 до 19.00
+					</div>
+					<div class="d-flex mb-5">
+						<div class="messenger__text">или напишите в мессенджер</div>
+						<ul class="messenger__list d-flex gap-2">
+							<li>
+								<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
+							</li>
+							<li>
+								<a href="#" aria-label="telegram" rel="nofollow" class="tg" target="_blank"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="main-contacts__text fs-24 mb-4">
+
+						<p>
+							Вы узнали немного о нашей команде, расскажите и вы немного о своей задаче, напишите свой вопрос или позвоните
+						</p>
+					</div>
+					<div class="fs-36 main-contacts__text d-flex align-items-end">
+						<p>Будем рады знакомству. Сморите о нас в соц. сетях</p>
+						<ul class="social__list d-flex gap-3">
+							<li>
+								<a href="https://vk.com/bestmaket" rel="nofollow" class="vk" target="_blank"></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/channel/UCXVbP9nnQMCAkPImrL9T9uQ/videos" rel="nofollow" class="you" target="_blank"></a>
+							</li>
+						</ul>
 					</div>
 				</div>
-
-
 				<div class="form-main contact">
 					<? $APPLICATION->IncludeComponent(
 						"tkk:infoportal.element.add.form",
@@ -174,11 +199,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 						),
 						false
 					); ?>
-
 				</div>
 			</div>
 		</div>
-
 	</section>
 	<div class="maps">
 		<script data-skip-moving="true" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IG-mXqYnNwnQDFvhVi17zNT_zsTrBxY&callback=initMap" async defer></script>

@@ -332,14 +332,18 @@ body {
 	justify-content: center;
 	gap: 10rem;
 }
-.request-calc-2 .form-green {
+.request-calc-2 .form-green,
+.main-contacts .form-green {
 	font-size: 24px;
 	color: #fff;
 	font-weight: 300;
-	background: #8dce26;
+	background-color: #8dce26;
 	/* padding: 15px 10% 25px; */
 	/* box-shadow: 0 0 10px #676767; */
-}
+	}
+	.main-contacts .form-green {
+		background-color: transparent;
+	}
 .request-calc-2.gray .form-green {
 	color: #000;
 }
@@ -1178,6 +1182,7 @@ body {
 
 .clients-slider {
 	position: relative;
+	overflow: hidden;
 }
 .clients-slider .slides {
 	margin: 0;
@@ -5561,15 +5566,15 @@ input:focus {
 	color: #000;
 }
 .layouts-item ul li.none {
-	opacity: 0;
-	height: 0;
-	overflow: hidden;
-	transition: opacity 0.5s ease, height 0.5s ease;
+	/* opacity: 0; */
+	/* height: 0; */
+	/* overflow: hidden; */
+	/* transition: opacity 0.5s ease, height 0.5s ease; */
 }
 .layouts-item ul li.show {
-	opacity: 1;
-	height: auto;
-	transition: opacity 0.5s ease, height 0.5s ease;
+	/* opacity: 1; */
+	/* height: auto; */
+	/* transition: opacity 0.5s ease, height 0.5s ease; */
 }
 .layouts-item ul li .display-all {
 	background: url('images/arrow_right.svg') no-repeat center / cover;
@@ -5581,6 +5586,7 @@ input:focus {
 	width: 18px;
 	display: block;
 	padding: 0;
+transition: transform 0.5s ease;
 }
 .layouts-item ul li.small {
 	right: 30px;
@@ -5591,7 +5597,7 @@ input:focus {
 }
 .layouts-item ul li .display-all.rotate {
 	transform: rotate(135deg);
-	transition: transform 0.3s ease;
+	transition: transform 0.5s ease;
 }
 .instruments__title {
 	line-height: 1;
@@ -5633,42 +5639,157 @@ input:focus {
 .instruments li:last-child::before {
 	bottom: 40%;
 }
-.advantages ul{
+.advantages ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 .advantages li {
-  position: relative;
-  max-width: 20%;
+	position: relative;
+	max-width: 20%;
 }
 .advantages li:last-child {
-  text-align: right;
+	text-align: right;
 }
 .advantages li:last-child::before {
-  right: 0;
+	right: 0;
 }
 .advantages li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #000;
-  top: -23%;
-  bottom: 110%;
-  width: 1px;
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #000;
+	top: -23%;
+	bottom: 110%;
+	width: 1px;
 }
 .advantages li:first-child::before {
-  left: 0;
+	left: 0;
 }
 .advantages li:nth-child(2)::before {
-  left: 50%;
-  transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 }
-.main-contacts{
-	background-color:#1b92d1;
+.main-contacts {
+	background-color: #1b92d1;
 }
 .form-main.contact {
-    padding: 0;
-    float: none;
-    width: inherit;
+	padding: 0;
+	float: none;
+	width: inherit;
+}
+.main-contacts .large-title {
+	padding: 0 0 30px;
+	position: relative;
+	z-index: 10;
+
+	font-weight: 300;
+	font-size: 64px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.main-contacts .address {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 151%;
+	color: #fff;
+	margin-bottom: 36px;
+	max-width: 50%;
+}
+.main-contacts .phone {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 130%;
+	color: #fff;
+	margin-bottom: 18px;
+	
+	}
+	.main-contacts .phone a {
+		text-decoration: none;
+	}
+.main-contacts .schedule {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 130%;
+	color: #fff;
+	padding-inline: 12px;
+	padding-block: 8px;
+	border: 1px solid #fff;
+	border-radius: 35px;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.main-contacts .messenger__text {
+	font-weight: 300;
+	font-size: 24px;
+	color: #fff;
+}
+.main-contacts .messenger__list {
+	list-style: none;
+}
+.main-contacts .messenger__list a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.main-contacts .messenger__list li {
+	width: 32px;
+	height: 32px;
+}
+.main-contacts .messenger__list a.whatsapp {
+	background: url('images/whatsapp-white.svg') 50% 50% no-repeat;
+}
+.main-contacts .messenger__list a.tg {
+	background: url('images/telegram-white.svg') 50% 50% no-repeat;
+}
+.main-contacts .main-contacts__text p {
+	font-weight: 300;
+
+	line-height: 100%;
+	color: #fff;
+}
+.main-contacts .social__list {
+	list-style: none;
+}
+.main-contacts .social__list a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.main-contacts .social__list li {
+	width: 40px;
+	height: 40px;
+}
+.main-contacts .social__list a.vk {
+	background: url('images/vk.svg') 50% 50% no-repeat;
+}
+.main-contacts .social__list a.you {
+	background: url('images/youtube.svg') 50% 50% no-repeat;
+}
+.advantages__title{
+	max-width: 300px;
+}
+.main-contacts form{
+	flex-direction: column;
+}
+.main-contacts__text{
+	max-width: 78%;
+}
+.main-contacts .form-main.contact{
+	border: 10px solid #fff;
+	border-right: none;
+border-radius: 5px;
+padding-top: 35px;
+    padding-left: 55px;
+		max-width: 40%;}
+		
+.main-contacts .form-green .form-row label{
+	display: block;
+}
+.main-contacts .form-green .file-upload .text-label{
+	display: inline-block;
+}
+.main-contacts .form-green .private .check{
+	max-width: 100%;
 }
