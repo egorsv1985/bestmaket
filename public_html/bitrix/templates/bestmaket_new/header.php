@@ -51,7 +51,7 @@ global $ERROR_404;
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/jquery-ui.min.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/js/twentytwenty.css'); ?>
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/bootstrap.css'); ?>
-    
+
     <? /* Карта в футере */ ?>
     <?
     //$APPLICATION->AddHeadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IG-mXqYnNwnQDFvhVi17zNT_zsTrBxY&callback=initMap");
@@ -99,7 +99,7 @@ global $ERROR_404;
                 <? else : ?>
                     <div class="header">
                         <div class="container">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center justify-content-between">
                                 <div class="col-5 d-none d-lg-block">
                                     <div class="menu">
                                         <? $APPLICATION->IncludeComponent(
@@ -134,7 +134,7 @@ global $ERROR_404;
                                         </a>
                                     <? endif; ?>
                                 </div>
-                                <div class="col-2 col-lg-3">
+                                <div class="col-2 col-xl-3">
                                     <div class="d-lg-none">
                                         <a href="tel:88007778504" class="phone-link callibri_phone_800 text-nowrap" title="88007778504">
                                             <img src="<?= SITE_TEMPLATE_PATH; ?>/images/phone.svg"" alt=" phone" class="">
@@ -152,7 +152,7 @@ global $ERROR_404;
                                 <div class="col-lg-1 col-3 ">
 
                                     <button class="open-menu header__burger burger button  d-flex gap-3 align-items-center  position-relative border-0 bg-white">
-                                        <span class="fs-17 text-uppercase">МЕНЮ</span>
+                                        <span class="fs-17 text-uppercase d-none d-xl-block">МЕНЮ</span>
                                         <span class="burger__inner position-relative d-flex justify-content-center align-items-center">
                                             <span></span>
                                         </span>
@@ -161,7 +161,27 @@ global $ERROR_404;
                             </div>
 
 
-
+                            <div class="menu-mob ">
+                                <div class="menu__title">Макетная мастерская “Бэст Макет”</div>
+                                <? $APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "horizontal_multilevel1",
+                                    array(
+                                        "COMPONENT_TEMPLATE" => "horizontal_multilevel",
+                                        "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
+                                        "MENU_CACHE_TYPE" => "A",    // Тип кеширования
+                                        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
+                                        "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
+                                        "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+                                        "MAX_LEVEL" => "2",    // Уровень вложенности меню
+                                        "CHILD_MENU_TYPE" => "top_lv2",    // Тип меню для остальных уровней
+                                        "USE_EXT" => "Y",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
+                                        "DELAY" => "N",    // Откладывать выполнение шаблона меню
+                                        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
+                                    ),
+                                    false
+                                ); ?>
+                            </div>
                         </div>
 
                     </div>

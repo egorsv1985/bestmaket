@@ -323,7 +323,43 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		?>
 	</div>
 	<div class="footer">
-		<div class="contaner">
+		<div class="container">
+			<div class="d-flex flex-column w-100">
+				<div class="menu">
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"top-menu",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"ROOT_MENU_TYPE" => "bottom",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"MENU_CACHE_GET_VARS" => array(),
+							"MAX_LEVEL" => "1",
+							"CHILD_MENU_TYPE" => "left",
+							"USE_EXT" => "Y",
+							"DELAY" => "N",
+							"ALLOW_MULTI_SELECT" => "N"
+						),
+						false
+					); ?>
+				</div>
+				<div class="info">
+					<?
+					$APPLICATION->IncludeFile("/includes/copy.php", array(), array(
+						'NAME' => 'текст',
+						'MODE' => 'text'
+					));
+					?>
+				</div>
+				<div class="polity d-flex gap-3">
+					<a href="/policy.pdf" target="_blank">Соглашение о конфиденциальности.</a>
+				<div class="copy">
+					Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
+				</div>
+				</div>
+			</div>
 			<div class="contact-text">
 				<?
 				$APPLICATION->IncludeFile($APPLICATION->GetCurPage() . "/contact-text.php", array(), array(
@@ -332,48 +368,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				));
 				?>
 			</div>
-			<div class="social">
-				<?
-				$APPLICATION->IncludeFile("/includes/social.php", array(), array(
-					'NAME' => 'ссылки',
-					'MODE' => 'text'
-				));
-				?>
-			</div>
-			<div class="menu">
-				<? $APPLICATION->IncludeComponent(
-					"bitrix:menu",
-					"top-menu",
-					array(
-						"COMPONENT_TEMPLATE" => ".default",
-						"ROOT_MENU_TYPE" => "bottom",
-						"MENU_CACHE_TYPE" => "A",
-						"MENU_CACHE_TIME" => "3600",
-						"MENU_CACHE_USE_GROUPS" => "Y",
-						"MENU_CACHE_GET_VARS" => array(),
-						"MAX_LEVEL" => "1",
-						"CHILD_MENU_TYPE" => "left",
-						"USE_EXT" => "Y",
-						"DELAY" => "N",
-						"ALLOW_MULTI_SELECT" => "N"
-					),
-					false
-				); ?>
-			</div>
-			<div class="info">
-				<?
-				$APPLICATION->IncludeFile("/includes/copy.php", array(), array(
-					'NAME' => 'текст',
-					'MODE' => 'text'
-				));
-				?>
-			</div>
-			<div class="polity">
-				<div class="copy">
-					Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
-				</div>
-				<a href="/policy.pdf" target="_blank">Соглашение о конфиденциальности.</a>
-			</div>
+
+
 		</div>
 	</div>
 	<div class="popup">

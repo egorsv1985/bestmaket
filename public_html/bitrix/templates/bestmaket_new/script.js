@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 
   $('.header .open-menu').click(function() {
-    $('.header .menu').slideToggle();
+    $('.header .menu-mob').slideToggle();
     return false;
   });
 

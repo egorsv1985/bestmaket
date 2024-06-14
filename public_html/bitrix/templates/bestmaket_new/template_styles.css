@@ -5793,3 +5793,11 @@ padding-top: 35px;
 .main-contacts .form-green .private .check{
 	max-width: 100%;
 }
+.main-contacts .form-green .form-submit button{
+	display: block;
+	width: 100%;
+}
+.menu-mob{
+	display: none;
+	
+}
