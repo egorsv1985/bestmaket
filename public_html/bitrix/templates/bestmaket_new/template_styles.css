@@ -1618,6 +1618,7 @@ body {
 	list-style: none;
 	display: flex;
 	gap: 20px;
+	flex-wrap: wrap;
 }
 .footer .menu ul li {
 	/* float: left; */
@@ -1627,6 +1628,7 @@ body {
 	text-decoration: none;
 	font-size: 20px;
 	line-height: 2;
+	text-wrap: nowrap;
 }
 .footer .info {
 	/* clear: left; */
