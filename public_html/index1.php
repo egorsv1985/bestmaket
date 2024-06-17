@@ -75,8 +75,8 @@ $APPLICATION->SetTitle("Главная");
 <section class="sample py-5">
 	<div class="container">
 		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
-		<p class="fs-48 fw-600 sample__desc mb-4">чтобы увидеть каким будет макет еще на старте работ</p>
-		<div class="d-flex sample__box">
+		<p class="fs-48 fw-600 sample__desc mb-5 mb-lg-4">чтобы увидеть каким будет макет еще на старте работ</p>
+		<div class="d-flex sample__box flex-column flex-lg-row">
 			<div class="sample__box-content">
 
 
@@ -88,12 +88,22 @@ $APPLICATION->SetTitle("Главная");
 						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
 					</div>
 					<div class="dragme">
-						<div class="dr-circle">
+						<div class="dr-circle d-none d-lg-block">
+							<svg class=" position-absolute svg-left " width="3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.825683 2.65582L2.91075 0.729717L2.91075 4.58191L0.825683 2.65582Z" fill="#525252" />
+							</svg>
+							<svg class=" position-absolute svg-right width=" 3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2.60986 2.65571L0.5248 4.58181L0.5248 0.729609L2.60986 2.65571Z" fill="#525252" />
+							</svg>
 
-							<svg class=" position-absolute svg-left" width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+						</div>
+						<div class="dr-circle  d-lg-none">
+
+							<svg class=" position-absolute svg-left " width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M-1.74846e-07 4L3.75 0.535898L3.75 7.4641L-1.74846e-07 4Z" fill="#525252" />
 							</svg>
-							<svg class=" position-absolute svg-right" width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class=" position-absolute svg-right " width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M4 4L0.249999 7.4641L0.249999 0.535898L4 4Z" fill="#525252" />
 							</svg>
 						</div>
@@ -115,8 +125,8 @@ $APPLICATION->SetTitle("Главная");
 				<div class="fs-25 sample__mess">Напишите в мессенджер, обсудим проект</div>
 				<div class="d-flex flex-column gap-5">
 
-					<a href="" class="sample__link d-inline-block fs-30 sample__link--tg position-relative ">Написать в Telegram</a>
-					<a href="" class="sample__link d-inline-block fs-30 sample__link--whatsapp position-relative ">Написать в WhatsApp</a>
+					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--tg position-relative ">Написать в Telegram</a>
+					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--whatsapp position-relative ">Написать в WhatsApp</a>
 				</div>
 			</div>
 		</div>
@@ -197,7 +207,7 @@ $APPLICATION->SetTitle("Главная");
 	); ?>
 
 </section>
-<section class="request-calc-2 py-5 blue">
+<section class="request-calc-2 py-lg-5 py-4 blue">
 	<div class="container">
 		<div class="title fs-64 mb-5">
 			<?
@@ -265,7 +275,7 @@ $APPLICATION->SetTitle("Главная");
 <div class="clients-main py-5">
 	<div class="container">
 		<div class="large-title fs-64">
-			Отзывы. Клиенты о нашей работе <small>Что говорят люди, которые уже работают с нами?</small>
+			Отзывы. Клиенты о нашей работе <small class="d-none d-lg-block">Что говорят люди, которые уже работают с нами?</small>
 		</div>
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -494,12 +504,12 @@ $APPLICATION->SetTitle("Главная");
 	<div class="container">
 		<h2 class="fs-64 mb-5">Почему Вам стоит работать с нами</h2>
 		<div class="why-work__content">
-			<div class="fs-24 why-work__text why-work__text--left px-4 py-5"><strong>Макетная мастерская</strong> “Бэст
-				макет”. Мы
+			<div class="fs-24 why-work__text why-work__text--left px-3 px-lg-4 py-4 py-lg-5 position-relative"><strong>Макетная мастерская “Бэст
+					макет”.</strong> Мы
 				изготавливаем качественные архитектурные, интерактивные и промышленные макеты для выставок, презентаций и
 				в
 				офисы продаж.</div>
-			<div class="fs-24 why-work__text why-work__text--right py-5 ps-5 pe-4 position-relative">
+			<div class="fs-24 why-work__text why-work__text--right py-5 px-4 ps-lg-5 pe-lg-4 position-relative">
 				<p>Архитектурные, промышленные и интерактивные макеты - наиболее мощный по силе воздействия инструмент
 					продвижения жилой и коммерческой недвижимости, промышленных и других объектов. Макет продемонстрирует
 					преимущества и особенности проекта, поможет произвести наиболее сильное впечатление на клиента или
@@ -534,13 +544,14 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="advantages py-5">
 	<div class="container">
-		<div class="advantages__content d-flex gap-5 align-items-end">
+		<h2 class="fs-36 mb-3 advantages__title d-lg-none ">Ещё 3 очевидных преимущества</h2>
+		<div class="advantages__content d-flex gap-lg-5 align-items-lg-end ">
 			<div class="advantages__box-img">
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/advantage.png" alt="" class="">
 			</div>
 			<div class="advantages__box-text pb-3">
-				<h2 class="fs-36 mb-5 advantages__title">Ещё 3 очевидных преимущества</h2>
-				<ul class="d-flex fs-20 justify-content-between pt-4 border-top border-dark">
+				<h2 class="fs-36 mb-5 advantages__title d-none d-lg-block ">Ещё 3 очевидных преимущества</h2>
+				<ul class="d-flex fs-20 justify-content-between  flex-column flex-lg-row">
 					<li class="">Готовы сделать срочный проект!</li>
 					<li class="">Отдельная рабочая группа на каждый проект</li>
 					<li class="">Даем гарантию на макет и соблюдаем ее</li>

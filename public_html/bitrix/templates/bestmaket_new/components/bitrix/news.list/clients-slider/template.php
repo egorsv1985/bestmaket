@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// print_r($arResult);
 ?>
 <div class="clients-slider">
 	<ul class="slides">
@@ -28,7 +29,7 @@ $this->setFrameMode(true);
 
 			<li>
 				<div class="slider-contaner " id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-					<div class="ms-auto position-relative box" style="height: auto; width: 88%; background: url('<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>') no-repeat 50% / cover;">
+					<div class=" position-relative box" style="height: auto; width: 88%; background: url('<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>') no-repeat 50% / cover;">
 
 						<!-- <img src="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>" alt="<?= htmlspecialchars($arItem['NAME']); ?>"> -->
 
@@ -38,7 +39,7 @@ $this->setFrameMode(true);
 									<img src="<?= $PREVIEW; ?>" alt="<?= htmlspecialchars($arItem['NAME']) ?>" width="200" height="260">
 								</a>
 							</div>
-							<div class="name">
+							<div class="name d-none d-lg-block">
 								<?= $arItem['~PREVIEW_TEXT']; ?>
 							</div>
 							<div class="logo">
@@ -49,12 +50,16 @@ $this->setFrameMode(true);
 							<div class="image">
 								<!-- <img src="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>" alt="<?= htmlspecialchars($arItem['NAME']); ?>"> -->
 							</div>
+
 							<div class="description">
-								<?= $arItem['DETAIL_TEXT']; ?>
+								<div class="desc-box">
+									
+									<?= $arItem['DETAIL_TEXT']; ?>
+								</div>
+								<button class="toggle-button d-lg-none">Показать еще</button>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</li>
 		<? endforeach; ?>

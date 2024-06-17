@@ -99,10 +99,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			?>
 		<? endif; ?>
 	<? endif; ?>
-	<section class="main-contacts mt-5 py-5">
+	<section class="main-contacts mt-5 py-5 overflow-hidden">
 		<div class="container">
 			<div class="d-flex justify-content-between flex-column flex-lg-row">
-				<div class="main-contacts__box">
+				<div class="main-contacts__box d-flex flex-column">
 
 					<div class="large-title fs-64">
 						Контакты
@@ -121,7 +121,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					</div>
 					<div class="d-flex mb-5 flex-column flex-lg-row">
 						<div class="messenger__text">или напишите в мессенджер</div>
-						<ul class="messenger__list d-flex gap-2">
+						<ul class="messenger__list d-flex gap-lg-2 gap-4">
 							<li>
 								<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
 							</li>
@@ -130,15 +130,15 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 							</li>
 						</ul>
 					</div>
-					<div class="main-contacts__text fs-24 mb-4">
+					<div class="main-contacts__text fs-24 mb-4 order-2 order-lg-0">
 
 						<p>
 							Вы узнали немного о нашей команде, расскажите и вы немного о своей задаче, напишите свой вопрос или позвоните
 						</p>
 					</div>
-					<div class="fs-36 main-contacts__text d-flex align-items-end">
+					<div class=" main-contacts__text main-contacts__text--big flex-column flex-lg-row d-flex align-items-lg-end order-1 order-lg-0">
 						<p>Будем рады знакомству. Сморите о нас в соц. сетях</p>
-						<ul class="social__list d-flex gap-3">
+						<ul class="social__list d-flex gap-3 ps-0">
 							<li>
 								<a href="https://vk.com/bestmaket" rel="nofollow" class="vk" target="_blank"></a>
 							</li>
@@ -355,9 +355,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				</div>
 				<div class="polity d-flex gap-3">
 					<a href="/policy.pdf" target="_blank">Соглашение о конфиденциальности.</a>
-				<div class="copy">
-					Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
-				</div>
+					<div class="copy">
+						Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
+					</div>
 				</div>
 			</div>
 			<div class="contact-text">

@@ -380,7 +380,7 @@ body {
 	border-bottom: 1px solid #000;
 }
 .form-green a:hover {
-	color: #2c80c5;
+	/* color: #2c80c5; */
 }
 .form-blue a:hover {
 	color: #8dce26;
@@ -835,7 +835,7 @@ body {
 	width: 40%;
 }
 .number-item .number {
-	font-weight: 100;
+	/* font-weight: 100; */
 	color: #7cc118;
 	font-size: 5.53em;
 	line-height: 120px;
@@ -1215,7 +1215,7 @@ body {
 	width: auto !important;
 }
 .clients-slider .intro .letter img {
-	width: 60% !important;
+	width: 88% ;
 	height: auto !important;
 	box-shadow: 0 0 6px #b8b8b8;
 	vertical-align: top;
@@ -1332,7 +1332,7 @@ body {
 	text-decoration: none;
 	font-weight: 300;
 	border: 1px solid #000;
-	padding: 12px 42px;
+	padding: 8px 57px;
 	border-radius: 27px;
 }
 .clients-list .btn-all a:hover {
@@ -1616,24 +1616,31 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: flex;
+	gap: 20px;
 }
 .footer .menu ul li {
-	float: left;
-	margin-right: 25px;
+	/* float: left; */
+	/* margin-right: 25px; */
 }
 .footer .menu a {
 	text-decoration: none;
+	font-size: 20px;
+	line-height: 2;
 }
 .footer .info {
-	clear: left;
+	/* clear: left; */
 	color: #3b3b3b;
-	font-size: 0.86em;
-	line-height: 1.58em;
+	font-size: 16px;
+	line-height: 1.4;
 	padding: 0.7em 0;
 }
 .footer .polity a {
 	color: #2c80c5;
 	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.4;
+	
 }
 .footer .polity .copy {
 	float: right;
@@ -3512,6 +3519,9 @@ sidebar li.selected a { color: #000; }
 	padding-left: 30px;
 	background: url('images/ico-checkbox.png') 0 0 no-repeat;
 }
+.form-green .private .check label a:hover {
+	/* color: #fff; */
+}
 .form-green .private .check input:checked + label {
 	background-image: url('images/ico-checkbox-checked.png');
 }
@@ -4811,8 +4821,8 @@ input:focus {
 	font-size: 16px;
 }
 .fs-20 {
-	--font-size-20: clamp(0.69rem, 1.28vi + 0.43rem, 1.25rem);
-	font-size: var(--font-size-20);
+	
+	font-size: 20px;
 }
 
 .fs-24 {
@@ -5336,6 +5346,7 @@ input:focus {
 	padding-top: 35px;
 	padding-bottom: 75px;
 	padding-left: 60px;
+	text-transform: none;
 }
 .number-item.large {
 	width: 65%;
@@ -5347,20 +5358,14 @@ input:focus {
 .number-items {
 	row-gap: 44px;
 }
-.number-item .number {
-	font-weight: 100;
-	color: #7cc118;
-	font-size: 96px;
-	line-height: 1;
-	margin-bottom: 15px;
-}
+
 .number__box {
 	width: 60%;
 	/* padding-left: 44px; */
 	column-gap: 5px;
 }
 .number__box .number-item {
-	width: 25%;
+	width: 30%;
 }
 .number .name {
 	font-size: 22px;
@@ -5395,6 +5400,7 @@ input:focus {
 	background-color: #f3f3f3;
 	max-width: 70%;
 	line-height: 1;
+	border-radius: 5px;
 }
 .why-work__text--right {
 	background-color: #e9e9e9;
@@ -5402,6 +5408,7 @@ input:focus {
 	margin-left: auto;
 	margin-top: -20px;
 	line-height: 1;
+	border-radius: 5px;
 }
 .why-work__text--right::before {
 	content: '';
@@ -5517,7 +5524,7 @@ input:focus {
 	position: absolute;
 	left: -10%;
 	bottom: -6%;
-	width: 20%;
+	width: 23%;
 	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .flex-control-nav.flex-control-paging {
@@ -5525,6 +5532,7 @@ input:focus {
 }
 .clients-slider .box {
 	padding: 35% 36px 13% 10%;
+	margin-left: auto;
 }
 .clients-slider .content {
 	position: absolute;
@@ -5605,7 +5613,9 @@ transition: transform 0.5s ease;
 	position: absolute;
 	width: 18px;
 }
-.layouts-item ul li .display-all.rotate {
+.layouts-item ul li .display-all.rotate,
+.layouts-item ul li .display-all:hover
+ {
 	transform: rotate(135deg);
 	transition: transform 0.5s ease;
 }
@@ -5653,6 +5663,8 @@ transition: transform 0.5s ease;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	padding-top: 24px;	
+	 border-top: 1px solid #000;
 }
 .advantages li {
 	position: relative;
@@ -5728,6 +5740,8 @@ transition: transform 0.5s ease;
 	border-radius: 35px;
 	display: inline-block;
 	margin-bottom: 30px;
+	max-width: 180px;
+	
 }
 .main-contacts .messenger__text {
 	font-weight: 300;
@@ -5747,16 +5761,20 @@ transition: transform 0.5s ease;
 	height: 32px;
 }
 .main-contacts .messenger__list a.whatsapp {
-	background: url('images/whatsapp-white.svg') 50% 50% no-repeat;
+	background: url('images/whatsapp-white.svg')  no-repeat center / 100%;
+	
 }
 .main-contacts .messenger__list a.tg {
-	background: url('images/telegram-white.svg') 50% 50% no-repeat;
+	background: url('images/telegram-white.svg')  no-repeat center / 100%;
 }
 .main-contacts .main-contacts__text p {
 	font-weight: 300;
 
 	line-height: 100%;
 	color: #fff;
+}
+.main-contacts__text--big{
+	font-size: 36px;
 }
 .main-contacts .social__list {
 	list-style: none;
@@ -5786,12 +5804,32 @@ transition: transform 0.5s ease;
 	max-width: 78%;
 }
 .main-contacts .form-main.contact{
+	position: relative;
 	border: 10px solid #fff;
 	border-right: none;
 border-radius: 5px;
 padding-top: 35px;
     padding-left: 55px;
+		/* overflow: hidden; */
 		max-width: 40%;}
+		.main-contacts .form-main.contact::after,
+		.main-contacts .form-main.contact::before{
+			content: "";
+			display: block;
+			background-color:#fff;
+			position: absolute;
+			z-index: 1;
+			right: -50%;
+			left: 50%;
+			height: 10px;
+			
+		}
+		.main-contacts .form-main.contact::after{
+			bottom: -10px;
+		}
+		.main-contacts .form-main.contact::before{
+			top: -10px;
+		}
 		
 .main-contacts .form-green .form-row label{
 	display: block;
@@ -5815,4 +5853,7 @@ padding-top: 35px;
 }
 .portfolio__list{
 	flex-wrap: wrap;
+}
+.why-work{
+	overflow: hidden;
 }

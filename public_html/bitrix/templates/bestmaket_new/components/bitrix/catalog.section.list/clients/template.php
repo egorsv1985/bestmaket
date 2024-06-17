@@ -120,7 +120,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 	</ul>
 
 	<? if ($arParams['COUNT']) : ?>
-		<div class="btn-all">
+		<div class="btn-all fs-20">
 			<a href="/clients/">все отзывы</a>
 		</div>
 	<? endif; ?>

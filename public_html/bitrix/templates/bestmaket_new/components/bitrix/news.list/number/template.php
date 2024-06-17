@@ -29,42 +29,42 @@ $this->setFrameMode(true);
 
 		<div class="number-item green border-right">
 			<div class="number-container">
-				<div class="number">300</div>
+				<div class="number fw-300">300</div>
 				<div class="name">
 					реализованных макетов </div>
 			</div>
 		</div>
 		<div class="number-item blue border-right">
 			<div class="number-container">
-				<div class="number">60</div>
+				<div class="number fw-300">60</div>
 				<div class="name">
 					РЕАЛИЗОВАННЫХ МАКЕТОВ</div>
 			</div>
 		</div>
 		<div class="number-item green">
 			<div class="number-container">
-				<div class="number">15</div>
+				<div class="number fw-300">15</div>
 				<div class="name">
 					реализованных макетов </div>
 			</div>
 		</div>
 		<div class="number-item blue border-right">
 			<div class="number-container">
-				<div class="number">80</div>
+				<div class="number fw-300">80</div>
 				<div class="name">
 					ГОРОДОВ, В КОТОРЫЕ ДОСТАВЛЕН МАКЕТ </div>
 			</div>
 		</div>
 		<div class="number-item green border-right">
 			<div class="number-container">
-				<div class="number">35</div>
+				<div class="number fw-300">35</div>
 				<div class="name">
 					СПЕЦИАЛИСТОВ В ШТАТЕ </div>
 			</div>
 		</div>
 		<div class="number-item blue">
 			<div class="number-container">
-				<div class="number">147</div>
+				<div class="number fw-300">147</div>
 				<div class="name">
 					МАКЕТЧИКОВ ПОДГОТОВИЛИ В СВОЕМ УЧЕБНОМ ЦЕНТРЕ </div>
 			</div>

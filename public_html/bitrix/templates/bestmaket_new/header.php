@@ -59,7 +59,7 @@ global $ERROR_404;
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="<?= SITE_TEMPLATE_PATH; ?>/mobile.css?v=9" media="only screen and (max-width: 900px)">
+    <link rel="stylesheet" type="text/css" href="<?= SITE_TEMPLATE_PATH; ?>/mobile.css?v=9" media="only screen and (max-width: 992px)">
     <meta name="cmsmagazine" content="0dc6be246ef5144e0f67fa4b0fa7b3fc">
     <meta name="google-site-verification" content="OIlCjUYbL2R2tihyhAcxNE2B-CGTifCNvciCoTT8f-U">
 
