@@ -47,12 +47,20 @@ $(document).ready(function () {
 		$(this).parent().fadeOut('fast')
 	})
 
-	$('.header .open-menu').click(function () {
-		$('.header .menu-mob').slideToggle()
-		$('.header').toggleClass('open')
-		return false
-	})
 
+$('.header .open-menu').click(function () {
+	$('.header .menu-mob').slideToggle()
+	$('.header').toggleClass('open')
+
+	var menuText = $(this).find('.text-uppercase')
+	if (menuText.text() === 'МЕНЮ') {
+		menuText.text('ЗАКРЫТЬ')
+	} else {
+		menuText.text('МЕНЮ')
+	}
+
+	return false
+})
 	// Обработчик для кликов на элементы списка, содержащие подменю
 	$('ul.menu-mob__list > li')
 		.has('ul.submenu')

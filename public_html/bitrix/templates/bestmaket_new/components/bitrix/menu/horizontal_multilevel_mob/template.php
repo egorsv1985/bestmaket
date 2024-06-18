@@ -1,7 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <? if (!empty($arResult)) : ?>
-	<ul class="d-flex justify-content-between gap-4 menu-mob__list">
+	<ul class="d-flex justify-content-between gap-1 gap-lg-4 menu-mob__list">
 
 		<?
 		$previousLevel = 0;

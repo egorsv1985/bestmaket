@@ -150,6 +150,9 @@ body {
 }
 .header .open-menu {
 	display: flex;
+	background-color: #fff;
+	
+	height: 50px;
 }
 .header .menu {
 	justify-content: space-between;
@@ -191,29 +194,32 @@ body {
 	border-radius: 50%;
 	background-color: #177ec2;
 }
+
 .header .burger__inner span,
-.header .burger__inner span::after,
-.header .burger__inner span::before {
+.header .burger__inner::after,
+.header .burger__inner::before {
+	content: '';
+	display: block;
+	position: absolute;
+	
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 	width: 32px;
 	height: 1px;
 	background-color: #fff;
 }
 .header .burger__inner span {
 	position: relative;
+	
 }
-.header .burger__inner span::after,
-.header .burger__inner span::before {
-	content: '';
-	display: block;
-	left: 0;
-	right: 0;
-	position: absolute;
+
+
+.header .burger__inner::after {
+	bottom: 18px;
 }
-.header .burger__inner span::after {
-	top: -8px;
-}
-.header .burger__inner span::before {
-	bottom: -8px;
+.header .burger__inner::before {
+	top: 18px;
 }
 .slider-large {
 	position: relative;
@@ -5909,25 +5915,51 @@ input:focus {
 .menu-mob ul a {
 	text-decoration: none;
 }
-.header.open .open-menu{
-	display: none;
+.header.open .open-menu {
+	background-color: transparent;
 }
-.header.open .asd{
-	border:none;
-	
+.header.open .asd {
+	border: none;
 }
-.menu-mob .second-item{
+.menu-mob .second-item {
 	position: absolute;
 	top: 40%;
 }
 
 .menu-mob .no-submenu:nth-child(6) {
-    position: absolute;
-    right: 9%;
-		top: 14%;
+	position: absolute;
+	right: 9%;
+	top: 14%;
 }
 .menu-mob .no-submenu:nth-child(7) {
-    position: absolute;
-    right: 6%;
-    top: 30%;
+	position: absolute;
+	right: 6%;
+	top: 30%;
+}
+.burger__text {
+	font-size: 17px;
+}
+.header.open .burger__text {
+	font-size: 20px;
+	color: #fff;
+}
+.header.open {
+	padding-top: 16px;
+}
+.header.open .burger__inner::after {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	bottom: calc(50% - 1px);
+}
+.header.open .burger__inner::before {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	top: calc(50% - 1px);
+}
+.header.open .burger__inner span {
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
 }

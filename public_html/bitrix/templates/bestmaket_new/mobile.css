@@ -1092,27 +1092,30 @@
 .menu-mob ul .submenu {
 	display: none;
 	transform: scaleY(0);
+	font-size: 18px;
+	padding-left: 48px;
+	width: 100%;
 }
 .menu-mob ul .item-open .submenu {
 	transform: scaleY(1);
+	margin-top: 16px;
 }
 
 .menu-mob ul .submenu a {
-	font-weight: 300;
-	font-size: 20px;
-	line-height: 150%;
-	color: #f4f4f4;
-	text-decoration: none;
-	padding-inline: 0;
+
+font-size: 18px;
+line-height: 1;
+	
 }
 .menu-mob ul {
 	flex-direction: column;
+	font-size: 24px;
 }
 .menu-mob ul a {
 	text-decoration: none;
 }
 .header.open .open-menu{
-	display: none;
+	
 }
 .header.open .asd{
 	border:none;
@@ -1132,4 +1135,30 @@
     position: relative;
     right: inherit;
     top: inherit ;
+}.header.open .burger__text{
+	font-size: 17px;
+
+}
+.menu__title{font-size: 12px;}
+.menu-mob{
+	padding-left: 20px;
+}.burger__text{
+	display: none;
+}
+.header.open .burger__text{
+	display: block;
+}
+.header.open .header__logo,
+.header.open .header__phones
+{
+	display: none;
+}
+.header.open .header__open-menu{
+	margin-left: auto;
+}
+.header.open{
+	padding-block: 4px;
+}
+.header.open .menu-mob{
+	padding-top: 20px;
 }
