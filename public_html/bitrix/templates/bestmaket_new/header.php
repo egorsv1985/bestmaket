@@ -125,7 +125,7 @@ global $ERROR_404;
                                 <div class="col-6 col-lg-3">
 
                                     <? if ($APPLICATION->GetCurPage() == '/') : ?>
-                                        <span class="logo d-block  text-center">
+                                        <span class="logo   text-center">
                                             <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" class="w-100 h-auto" alt="Макетная мастерская" width="182" height="62">
                                         </span>
                                     <? else : ?>
@@ -151,7 +151,7 @@ global $ERROR_404;
                                 </div>
                                 <div class="col-lg-1 col-3 ">
 
-                                    <button class="open-menu header__burger burger button  d-flex gap-3 align-items-center  position-relative border-0 bg-white">
+                                    <button class="open-menu header__burger burger button   gap-3 align-items-center  position-relative border-0 bg-white">
                                         <span class="fs-17 text-uppercase d-none d-xl-block">МЕНЮ</span>
                                         <span class="burger__inner position-relative d-flex justify-content-center align-items-center">
                                             <span></span>
@@ -165,9 +165,9 @@ global $ERROR_404;
                                 <div class="menu__title">Макетная мастерская “Бэст Макет”</div>
                                 <? $APPLICATION->IncludeComponent(
                                     "bitrix:menu",
-                                    "horizontal_multilevel1",
+                                    "horizontal_multilevel_mob",
                                     array(
-                                        "COMPONENT_TEMPLATE" => "horizontal_multilevel",
+                                        "COMPONENT_TEMPLATE" => "horizontal_multilevel_mob",
                                         "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
                                         "MENU_CACHE_TYPE" => "A",    // Тип кеширования
                                         "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)

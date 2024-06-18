@@ -1000,7 +1000,7 @@
 
 	background-color: #e9e9e9;
 	position: absolute;
-	left: -20%;
+	left: -25%;
 	top: 0%;
 
 	bottom: 0%;
@@ -1012,7 +1012,7 @@
 
 	background-color: #f3f3f3;
 	position: absolute;
-	right: -20%;
+	right: -25%;
 	top: 0%;
 
 	bottom: 0%;
@@ -1033,7 +1033,12 @@
 	top: 20px;
 }
 .instruments li:nth-child(1)::before {
+	top: 35%;
+}
+@media  (max-width: 400px)  {
+.instruments li:nth-child(1)::before {
 	top: 24%;
+}
 }
 .instruments li::before {
 	bottom: -24px;

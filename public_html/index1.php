@@ -88,7 +88,7 @@ $APPLICATION->SetTitle("Главная");
 						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
 					</div>
 					<div class="dragme">
-						<div class="dr-circle d-none d-lg-block">
+						<div class="dr-circle d-lg-none">
 							<svg class=" position-absolute svg-left " width="3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M0.825683 2.65582L2.91075 0.729717L2.91075 4.58191L0.825683 2.65582Z" fill="#525252" />
 							</svg>
@@ -98,7 +98,7 @@ $APPLICATION->SetTitle("Главная");
 
 
 						</div>
-						<div class="dr-circle  d-lg-none">
+						<div class="dr-circle d-none d-lg-block  ">
 
 							<svg class=" position-absolute svg-left " width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M-1.74846e-07 4L3.75 0.535898L3.75 7.4641L-1.74846e-07 4Z" fill="#525252" />

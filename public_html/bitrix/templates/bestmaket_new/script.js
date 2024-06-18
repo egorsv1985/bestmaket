@@ -49,6 +49,7 @@ $(document).ready(function () {
 
 	$('.header .open-menu').click(function () {
 		$('.header .menu-mob').slideToggle()
+		$('.header').toggleClass('open')
 		return false
 	})
 
