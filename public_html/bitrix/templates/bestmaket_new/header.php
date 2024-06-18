@@ -104,9 +104,9 @@ global $ERROR_404;
                                     <div class="menu">
                                         <? $APPLICATION->IncludeComponent(
                                             "bitrix:menu",
-                                            "horizontal_multilevel1",
+                                            "horizontal_multilevel_mob",
                                             array(
-                                                "COMPONENT_TEMPLATE" => "horizontal_multilevel",
+                                                "COMPONENT_TEMPLATE" => "horizontal_multilevel_mob",
                                                 "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
                                                 "MENU_CACHE_TYPE" => "A",    // Тип кеширования
                                                 "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)

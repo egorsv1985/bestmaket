@@ -53,6 +53,32 @@ $(document).ready(function () {
 		return false
 	})
 
+	// Обработчик для кликов на элементы списка, содержащие подменю
+	$('ul.menu-mob__list > li')
+		.has('ul.submenu')
+		.click(function (event) {
+			// Проверяем, является ли целевой элемент ссылкой
+			if (!$(event.target).is('a')) {
+				event.preventDefault() // Предотвращаем переход по ссылке для других элементов
+				$(this).children('ul.submenu').stop(true, true).slideToggle(300) // Переключаем видимость подменю с анимацией
+				$(this).toggleClass('item-open') // Добавляем/удаляем класс open для li
+			}
+		})
+
+	// Обработчик для кликов на ссылки внутри подменю
+	$('ul.submenu a').click(function (event) {
+		event.stopPropagation() // Останавливаем всплытие события, чтобы не срабатывал обработчик на li
+	})
+
+	// Обработчик для кликов на ссылки в элементах списка с подменю
+	$('ul.menu-mob__list > li > a').click(function (event) {
+		if ($(this).siblings('ul.submenu').length > 0) {
+			event.preventDefault() // Предотвращаем переход по ссылке, если у нее есть подменю
+			$(this).siblings('ul.submenu').stop(true, true).slideToggle(300) // Переключаем видимость подменю с анимацией
+			$(this).parent().toggleClass('item-open') // Добавляем/удаляем класс open для li
+		}
+	})
+
 	$('.fancy').fancybox({})
 
 	$(
@@ -257,7 +283,7 @@ $(document).ready(function () {
 		controlNav: true,
 		touch: true,
 	})
-	
+
 	const maxLength = 300 // Максимальная длина текста до обрезки
 	const description = $('.desc-box')
 	const originalText = description.html()
@@ -293,7 +319,7 @@ $(document).ready(function () {
 			$(this).text('Скрыть')
 		}
 	})
-	
+
 	$('.file-upload input[type=file]').live('change', function () {
 		var filename = $(this).val().replace(/.*\\/, '')
 		if (!filename) filename = 'Прикрепить файл:'

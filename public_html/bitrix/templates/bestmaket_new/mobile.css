@@ -1089,3 +1089,47 @@
 .main-contacts .form-main.contact {
 	max-width: 100%;
 }
+.menu-mob ul .submenu {
+	display: none;
+	transform: scaleY(0);
+}
+.menu-mob ul .item-open .submenu {
+	transform: scaleY(1);
+}
+
+.menu-mob ul .submenu a {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 150%;
+	color: #f4f4f4;
+	text-decoration: none;
+	padding-inline: 0;
+}
+.menu-mob ul {
+	flex-direction: column;
+}
+.menu-mob ul a {
+	text-decoration: none;
+}
+.header.open .open-menu{
+	display: none;
+}
+.header.open .asd{
+	border:none;
+	
+}
+.menu-mob .second-item{
+	position: relative;
+	top: inherit;
+}
+
+.menu-mob .no-submenu:nth-child(6) {
+    position: relative;
+    right: inherit;
+		top: inherit;
+}
+.menu-mob .no-submenu:nth-child(7) {
+    position: relative;
+    right: inherit;
+    top: inherit ;
+}

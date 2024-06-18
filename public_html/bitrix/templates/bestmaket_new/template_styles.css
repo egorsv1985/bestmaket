@@ -164,7 +164,7 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	width: 100%;
+	/* width: 100%; */
 	display: flex;
 	font-size: 20px;
 	font-weight: 300;
@@ -5877,6 +5877,7 @@ input:focus {
 .header.open .phones {
 	display: none !important;
 }
+
 .menu-mob ul .submenu {
 	position: relative;
 	opacity: 1;
