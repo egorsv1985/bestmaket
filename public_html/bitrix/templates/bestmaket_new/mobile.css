@@ -1238,8 +1238,14 @@
 }
 .instruments__list::before {
 	bottom: 25%;
-}	.main-contacts::before{
-			
-    top: 11%;
-
+}
+.main-contacts::before {
+	top: 11%;
+}
+.main__fon-text,
+.animate-left-right0,
+.animate-left-right1,
+.animate-left-right2,
+.animate-left-right3 {
+	animation: none;
 }

@@ -4902,51 +4902,8 @@ input:focus {
 }
 .main {
 	padding-top: 15vh;
-	/* overflow: hidden; */
-	/* background: linear-gradient(
-		270deg,
-		rgba(141, 206, 38, 0.5),
-		rgb(22, 126, 194)
-	); */
-	/* background-size: 400% 400%; */
-	/* animation: gradientAnimation 15s ease infinite; */
 }
 
-@keyframes gradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-.blur-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(141, 206, 38, 0.5);
-	box-shadow: 0px 4px 70px -155px rgba(255, 255, 255, 0.25);
-	filter: blur(194px);
-	z-index: -1;
-	animation: blurAnimation 15s ease infinite;
-}
-
-@keyframes blurAnimation {
-	0% {
-		background: rgba(141, 206, 38, 0.5);
-	}
-	50% {
-		background: rgb(22, 126, 194);
-	}
-	100% {
-		background: rgba(141, 206, 38, 0.5);
-	}
-}
 .main__fon-text {
 	animation: textAnimation 20s linear infinite;
 	font-size: 400px;
@@ -5794,19 +5751,20 @@ input:focus {
 }
 .main-contacts {
 	background-color: #1b92d1;
-	position: relative;}
-	.main-contacts::before{
-			content: "";
-			display: block;
-			position: absolute;
-			width: 444px;
-			height: 424px;
+	position: relative;
+}
+.main-contacts::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 444px;
+	height: 424px;
 	border-radius: 50%;
-background-color: rgba(255, 255, 255, 0.8);
-filter: blur(194px);
-box-shadow: 0 4px 70px 0 rgba(255, 255, 255, 0.25);
-    top: -11%;
-    right: 28%;
+	background-color: rgba(255, 255, 255, 0.8);
+	filter: blur(194px);
+	box-shadow: 0 4px 70px 0 rgba(255, 255, 255, 0.25);
+	top: -11%;
+	right: 28%;
 }
 .form-main.contact {
 	padding: 0;
@@ -6235,4 +6193,61 @@ box-shadow: 0 4px 70px 0 rgba(255, 255, 255, 0.25);
 .sl-container .view-after {
 	width: 100px;
 	z-index: 200;
+}
+.scroll-up {
+	position: fixed;
+	right: 150px;
+	bottom: 50px;
+	z-index: 1000;
+	width: 50px;
+	height: 50px;
+	color: #167ec2;
+	cursor: pointer;
+	
+	border-radius: 50%;
+	border: 0.5px solid #167ec2;
+	background-color: #167ec2;
+	
+}
+
+.scroll-up:hover {
+	background-color: #8dce26;
+	border-color: #8dce26;
+}
+
+
+.header {
+	animation: add-shadow linear both;
+}
+.header {
+	animation-timeline: scroll();
+	animation-range: 0 150px;
+}
+@keyframes add-shadow {
+	from {
+		background-color: transparent;
+	}
+	to {
+		background-color: #fff;
+	}
+}
+
+.scroll-up {
+	animation: show-scroll-up linear both;
+	animation-timeline: scroll();
+	animation-range: 0 100dvh;
+}
+@keyframes show-scroll-up {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+		visibility: hidden;
+		
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+		
+		transform: translateY(0);
+	}
 }

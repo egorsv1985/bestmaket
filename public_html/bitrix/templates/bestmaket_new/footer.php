@@ -372,6 +372,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		</div>
 	</footer>
+	<!-- кнопка вверх -->
+	<div class="scroll-up d-flex justify-content-center align-items-center">
+		<svg class="scroll-up__svg" width="34.060059" height="32.543945" viewBox="0 0 34.0601 32.5439" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+			<path class="scroll-up__svg-path" id="arrow_right-[#349]" d="M5.63 15.6L7.22 17.28L15.88 9.36L15.89 27.29L18.17 27.42L18.16 9.49L26.81 18.41L28.42 16.94C24.25 12.63 21.01 9.3 17.02 5.18L5.63 15.6Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
+		</svg>
+		
+	</div>
 	<div class="popup">
 		<div id="popupOrder">
 			<div class="form-popup">

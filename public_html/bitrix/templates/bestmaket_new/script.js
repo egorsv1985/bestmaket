@@ -351,16 +351,24 @@ $(document).ready(function () {
 		$(this).parent().find('.text-label').text(filename)
 		$(this).parents('.file-upload').parent().find('.filename').val(filename)
 	})
-$(window).scroll(function (event) {
-	var body = $('body').scrollTop()
-	if (body == 0) {
-		var body = $('html').scrollTop()
-	}
-	if (body > 0) {
-		$('.header').addClass('fixed')
-	} else {
-		$('.header').removeClass('fixed')
-	}
+// $(window).scroll(function (event) {
+// 	var body = $('body').scrollTop()
+// 	if (body == 0) {
+// 		var body = $('html').scrollTop()
+// 	}
+// 	if (body > 0) {
+// 		$('.header').addClass('fixed')
+// 	} else {
+// 		$('.header').removeClass('fixed')
+// 	}
+// })
+const scrollUp = $('.scroll-up') // Находим кнопку "вверх" по классу
+
+
+
+scrollUp.click(function () {
+	// Обработчик события клика по кнопке "вверх"
+	$('html, body').animate({ scrollTop: 0 }, 'smooth') // Плавно прокручиваем страницу вверх
 })
 	/*
 	$('.menu a').click(function() {
