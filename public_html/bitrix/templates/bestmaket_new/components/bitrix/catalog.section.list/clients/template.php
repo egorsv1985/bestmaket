@@ -31,7 +31,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 			if ($key >= $arParams['COUNT'] && $arParams['COUNT'] > 0)
 				continue;
 		?>
-			<li class="d-flex flex-column" <?= (!($key % 3) ? 'class=""' : ''); ?> id="<?= $this->GetEditAreaId($arSection['ID']); ?>" style="background-image: url('<?= $arSection['PICTURE']['SRC']; ?>');"> <strong><?= $arSection['NAME']; ?></strong>
+			<li class="d-flex flex-column" <?= (!($key % 3) ? '' : ''); ?> id="<?= $this->GetEditAreaId($arSection['ID']); ?>" style="background-image: url('<?= $arSection['PICTURE']['SRC']; ?>');"> <strong><?= $arSection['NAME']; ?></strong>
 
 				<? $APPLICATION->IncludeComponent(
 					"bitrix:catalog.section",

@@ -19,6 +19,10 @@
 .header .logo {
 	/* float: left; */
 	max-width: 148px;
+	position: relative;
+	top: inherit;
+	left: inherit;
+	transform: none;
 	/* width: 35%; */
 }
 .header .logo img {
@@ -155,7 +159,7 @@
 	/* float: none; */
 	/* display: block; */
 	/* padding: 6px 13px; */
-	background: #fff;
+	/* background: #fff; */
 	color: #7c7a7a;
 }
 .works-tab ul.tabs a br {
@@ -466,12 +470,15 @@
 }
 .footer .social li {
 	float: none;
-	width: 0 4px;
+	/* width: 0 4px; */
 	display: inline-block;
 }
 .footer .menu {
 	float: none;
 	width: auto;
+}
+.footer .menu ul {
+	gap: 8px;
 }
 .footer .menu ul li {
 	display: block;
@@ -480,6 +487,7 @@
 	margin: 0;
 }
 .footer .menu ul li a {
+	line-height: 1;
 	display: block;
 	text-align: center;
 	padding: 2px 0;
@@ -554,6 +562,7 @@
 .layouts-item {
 	float: none;
 	width: 100%;
+	padding-inline: 20px;
 }
 .main-content {
 	float: none;
@@ -802,7 +811,7 @@
 }
 
 .main {
-	padding-top: 42px;
+	padding-top: 16vh;
 }
 .main .flex-direction-nav {
 	display: none;
@@ -823,6 +832,9 @@
 }
 .form-green .private .check {
 	max-width: 100%;
+}
+.sample::before {
+	display: none;
 }
 .sample__content {
 	padding-inline: 32px;
@@ -1186,6 +1198,7 @@
 		display: none;
 	}
 }
+
 .burger__text--menu {
 	font-weight: 300;
 	font-size: 130px;
@@ -1195,5 +1208,38 @@
 	opacity: 0;
 	right: -50%;
 	top: 60%;
-	transition: all 0.5s ease-in-out; 
+	transition: all 0.5s ease-in-out;
+}
+.layouts-item:nth-child(4)::before,
+.layouts-item:nth-child(2)::before {
+	display: none;
+}
+.layouts-item:nth-child(5)::before {
+	box-shadow: 0 4px 70px -155px rgba(255, 255, 255, 0.25);
+	background-color: rgba(141, 206, 38, 0.8);
+	top: 22%;
+	right: -45%;
+	left: inherit;
+}
+.layouts-item:nth-child(6)::before {
+	box-shadow: 0 4px 70px -155px rgba(255, 255, 255, 0.25);
+	background-color: #167ec2;
+	top: 2%;
+	left: -35%;
+}
+.layouts-item:first-child::before {
+	top: -27%;
+	left: -28%;
+}
+.layouts-item:nth-child(3)::before {
+	top: -69%;
+	right: -45%;
+	left: inherit;
+}
+.instruments__list::before {
+	bottom: 25%;
+}	.main-contacts::before{
+			
+    top: 11%;
+
 }

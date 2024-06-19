@@ -104,9 +104,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<div class="d-flex justify-content-between flex-column flex-lg-row">
 				<div class="main-contacts__box d-flex flex-column">
 
-					<div class="large-title fs-64">
+					<h2 class="large-title fs-64">
 						Контакты
-					</div>
+					</h2>
 
 					<div class="address">
 						199048, г.Санкт-Петербург,
@@ -119,7 +119,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					<div class="schedule">
 						Пн-Пт. с 10.00 до 19.00
 					</div>
-					<div class="d-flex mb-5 flex-column flex-lg-row">
+					<div class="d-flex mb-5 flex-column flex-lg-row gap-3">
 						<div class="messenger__text">или напишите в мессенджер</div>
 						<ul class="messenger__list d-flex gap-lg-2 gap-4">
 							<li>
@@ -322,7 +322,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		));
 		?>
 	</div>
-	<div class="footer">
+	<footer class="footer">
 		<div class="container">
 			<div class="d-flex flex-column w-100">
 				<div class="menu">
@@ -353,7 +353,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					));
 					?>
 				</div>
-				<div class="polity d-flex gap-3">
+				<div class="polity d-flex gap-3 flex-column flex-md-row">
 					<a href="/policy.pdf" target="_blank">Соглашение о конфиденциальности.</a>
 					<div class="copy">
 						Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
@@ -371,7 +371,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 
 		</div>
-	</div>
+	</footer>
 	<div class="popup">
 		<div id="popupOrder">
 			<div class="form-popup">

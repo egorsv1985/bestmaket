@@ -6,8 +6,29 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 
 ?>
+<div class="position-relative    ">
+	<div class="position-relative d-flex flex-column h-100 overflow-hidden ">
+		<div class="position-relative  hero__animation animate-translate">
+
+
+		</div>
+
+	</div>
+</div>
 <section class=" main position-relative ">
-	<div class="blur-overlay"></div>
+	<!-- <div class="blur-overlay"></div> -->
+	<div class="position-absolute circle1  overflow-hidden  animate-left-right0 ">
+
+	</div>
+	<div class="position-absolute circle2 overflow-hidden  animate-left-right1 ">
+
+	</div>
+	<div class="position-absolute circle3 overflow-hidden  animate-left-right2 ">
+
+	</div>
+	<div class="position-absolute circle4 overflow-hidden  animate-left-right3 ">
+
+	</div>
 	<div class="main__fon-text text-secondary position-absolute text-nowrap">Макетная мастерская</div>
 	<div class="container">
 		<h1 class="text-center fs-32 mb-5">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
@@ -77,22 +98,20 @@ $APPLICATION->SetTitle("Главная");
 		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
 		<p class="fs-48 fw-600 sample__desc mb-5 mb-lg-4">чтобы увидеть каким будет макет еще на старте работ</p>
 		<div class="d-flex sample__box flex-column flex-lg-row">
-			<div class="sample__box-content">
-
-
+			<div class="sample__box-content">				
 				<div class="sl-container">
 					<div class="view view-after">
-						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
+						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz-black.png" alt="До" />
 					</div>
 					<div class="view view-before">
-						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" />
+						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz.png" alt="После" />
 					</div>
 					<div class="dragme">
 						<div class="dr-circle d-lg-none">
 							<svg class=" position-absolute svg-left " width="3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M0.825683 2.65582L2.91075 0.729717L2.91075 4.58191L0.825683 2.65582Z" fill="#525252" />
 							</svg>
-							<svg class=" position-absolute svg-right width=" 3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg class=" position-absolute svg-right" width="3" height="5" viewBox="0 0 3 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M2.60986 2.65571L0.5248 4.58181L0.5248 0.729609L2.60986 2.65571Z" fill="#525252" />
 							</svg>
 
@@ -130,7 +149,6 @@ $APPLICATION->SetTitle("Главная");
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </section>
 <section class="number py-5">
@@ -209,14 +227,14 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="request-calc-2 py-lg-5 py-4 blue">
 	<div class="container">
-		<div class="title fs-64 mb-5">
+		<h2 class="title fs-64 mb-5">
 			<?
 			$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
 				'NAME' => 'текст',
 				'MODE' => 'html'
 			));
 			?>
-		</div>
+		</h2>
 
 		<div class="form-container">
 			<? $APPLICATION->IncludeComponent(
@@ -269,6 +287,17 @@ $APPLICATION->SetTitle("Главная");
 				),
 				false
 			); ?>
+		</div>
+		<div class="d-flex mtn-5 flex-column flex-lg-row justify-content-end gap-5">
+			<div class="messenger__text">или напишите в мессенджер</div>
+			<ul class="messenger__list d-flex gap-4">
+				<li>
+					<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
+				</li>
+				<li>
+					<a href="#" aria-label="telegram" rel="nofollow" class="tg" target="_blank"></a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </section>
@@ -383,14 +412,14 @@ $APPLICATION->SetTitle("Главная");
 </div>
 <section class="request-calc-2 py-5 gray">
 	<div class="container">
-		<div class="title fs-64 mb-5">
+		<h2 class="title fs-64 mb-5">
 			<?
 			$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
 				'NAME' => 'текст',
 				'MODE' => 'html'
 			));
 			?>
-		</div>
+		</h2>
 
 		<div class="form-container">
 			<? $APPLICATION->IncludeComponent(
@@ -444,16 +473,27 @@ $APPLICATION->SetTitle("Главная");
 				false
 			); ?>
 		</div>
+		<div class="d-flex mtn-5 flex-column flex-lg-row justify-content-end gap-5 ">
+			<div class="messenger__text">или напишите в мессенджер</div>
+			<ul class="messenger__list d-flex gap-4 ">
+				<li>
+					<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
+				</li>
+				<li>
+					<a href="#" aria-label="telegram" rel="nofollow" class="tg" target="_blank"></a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </section>
 <? if ($USER->IsAdmin() || true) : ?>
-	<div class="main-makets py-5">
+	<section class="main-makets py-5">
 		<div class="container">
-			<div class="text">
-				<div class="text-page">
-					<div class="title">
+			
+				
+					<h2 class="title">
 						Виды макетов
-					</div>
+					</h2>
 					<div class="layouts-items d-flex flex-wrap ">
 						<?
 						$arFilter = array('IBLOCK_ID' => 13, 'ACTIVE' => 'Y');
@@ -494,10 +534,10 @@ $APPLICATION->SetTitle("Главная");
 						endwhile; ?>
 
 					</div>
-				</div>
-			</div>
+				
+			
 		</div>
-	</div>
+	</section>
 <? endif; ?>
 
 <section class="why-work py-5">

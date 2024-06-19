@@ -15,9 +15,9 @@ $this->setFrameMode(true);
 
 <div class="number-items pt-5 ">
 	<div class="number-item title">
-		<div class="fs-72 number__title"> Цифры / Факты
+		<h2 class="fs-72 number__title"> Цифры / Факты
 
-		</div>
+		</h2>
 	</div>
 	<div class="number-item large">
 		<div class="number-container" style="background-image:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts1.png'); background-repeat: no-repeat"></div>

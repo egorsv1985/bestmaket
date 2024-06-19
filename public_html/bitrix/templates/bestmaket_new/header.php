@@ -89,15 +89,15 @@ global $ERROR_404;
         <? if (defined("ERROR_404") || $ERROR_404) : ?>
             <div class="page404">
                 <div class="container">
-                    <div class="header py-5">
+                    <header class="header py-5">
                         <a href="/" class="logo">
                             <img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" alt="Макетная мастерская" width="182" height="62">
                         </a>
-                    </div>
+                    </header>
 
 
                 <? else : ?>
-                    <div class="header">
+                    <header class="header">
                         <div class="container">
                             <div class="row align-items-center justify-content-between w-100">
                                 <div class="col-5 d-none d-lg-block ">
@@ -137,7 +137,7 @@ global $ERROR_404;
                                 <div class="col-2 col-xl-3 header__phones">
                                     <div class="d-lg-none">
                                         <a href="tel:88007778504" class="phone-link callibri_phone_800 text-nowrap" title="88007778504">
-                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/phone.svg"" alt=" phone" class="">
+                                            <img src="<?= SITE_TEMPLATE_PATH; ?>/images/phone.svg" alt=" phone" class="">
                                         </a>
                                     </div>
                                     <div class=" phones d-none d-lg-block">
@@ -150,7 +150,7 @@ global $ERROR_404;
                                     </div>
                                 </div>
                                 <div class="col-lg-1 col-4 header__open-menu">
-                                    <button class="open-menu header__burger burger button    align-items-center  position-relative border-0 ">
+                                    <button class="open-menu header__burger burger button    align-items-center  position-relative border-0 " aria-label="открыть меню" >
                                         <span class=" text-uppercase  fw-300 burger__text">МЕНЮ</span>
                                         <span class="burger__inner position-relative   d-flex justify-content-center align-items-center">
                                             <span></span>
@@ -184,5 +184,5 @@ global $ERROR_404;
                             </div>
                         </div>
 
-                    </div>
+                    </header>
                 <? endif ?>

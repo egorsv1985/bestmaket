@@ -351,7 +351,17 @@ $(document).ready(function () {
 		$(this).parent().find('.text-label').text(filename)
 		$(this).parents('.file-upload').parent().find('.filename').val(filename)
 	})
-
+$(window).scroll(function (event) {
+	var body = $('body').scrollTop()
+	if (body == 0) {
+		var body = $('html').scrollTop()
+	}
+	if (body > 0) {
+		$('.header').addClass('fixed')
+	} else {
+		$('.header').removeClass('fixed')
+	}
+})
 	/*
 	$('.menu a').click(function() {
 		var href = $(this).attr('href');
@@ -433,6 +443,7 @@ $(document).ready(function () {
 		$('.menu li.' + id).addClass('active');
 	});	
 */
+
 	;(function ($) {
 		var $dragMe = $('.dragme'),
 			$container = $('.sl-container'),
