@@ -24,8 +24,8 @@
 }
 html,
 body {
-	height: 100%;
-	font-size: 14px;
+	
+	font-size: 16px;
 	font-family: 'Futura', sans-serif;
 	color: #000;
 	background: #fff;
@@ -33,6 +33,9 @@ body {
 	padding: 0;
 	height: 100%;
 	min-height: 100%;
+}
+body.no-scroll{
+	overflow-y: hidden;
 }
 .clear {
 	clear: both;
@@ -150,7 +153,9 @@ body {
 }
 .header .open-menu {
 	display: flex;
-	background-color: #fff;
+	background-color: transparent;
+	gap: 12px;
+	margin-left: auto;
 	
 	height: 50px;
 }
@@ -5279,7 +5284,7 @@ input:focus {
 }
 .sl-container .view-after {
 	width: 100px;
-	z-index: 200;
+	z-index: 50;
 }
 .sl-container .dragme {
 	position: absolute;
@@ -5769,7 +5774,7 @@ input:focus {
 .main-contacts .messenger__list a.tg {
 	background: url('images/telegram-white.svg') no-repeat center / 100%;
 }
-.main-contacts .main-contacts__text p {
+.main-contacts__text p {
 	font-weight: 300;
 
 	line-height: 100%;
@@ -5822,7 +5827,7 @@ input:focus {
 	background-color: #fff;
 	position: absolute;
 	z-index: 1;
-	right: -50%;
+	right: -1000%;
 	left: 50%;
 	height: 10px;
 }
@@ -5943,6 +5948,7 @@ input:focus {
 	font-size: 20px;
 	color: #fff;
 }
+
 .header.open {
 	padding-top: 16px;
 }
@@ -5962,4 +5968,18 @@ input:focus {
 	-webkit-transform: scale(0);
 	-ms-transform: scale(0);
 	transform: scale(0);
+}
+.burger__text--menu {
+	font-weight: 300;
+	font-size: 130px;
+	text-transform: uppercase;
+	color: #53a4d9;
+	transform: rotate(270deg);
+	opacity: 0;
+	right: -7%;
+	top: 25%;
+	transition: all 0.5s ease-in-out; 
+}
+.header.open .burger__text--menu{
+	opacity: 1;
 }

@@ -25,7 +25,7 @@
 			<? if ($arItem["IS_PARENT"]) : ?>
 
 				<? if ($arItem["DEPTH_LEVEL"] == 1) : ?>
-					<li class="<?= $liClass ?>"><a href="<?= $arItem["LINK"] ?>" class="text-nowrap <? if ($arItem["SELECTED"]) : ?>contactsActive submenu-link<? else : ?><? endif ?>"><?= $arItem["TEXT"] ?></a>
+					<li class="<?= $liClass ?> item"><a href="<?= $arItem["LINK"] ?>" class="text-nowrap <? if ($arItem["SELECTED"]) : ?>contactsActive submenu-link<? else : ?><? endif ?>"><?= $arItem["TEXT"] ?></a>
 
 						<ul class="submenu">
 						<? else : ?>
@@ -42,9 +42,9 @@
 				<? endif ?>
 			<? else : ?>
 				<? if ($arItem["DEPTH_LEVEL"] == 1) : ?>
-					<li class="<?= $liClass ?>"><a href="" class="text-nowrap <? if ($arItem["SELECTED"]) : ?>selected<? else : ?><? endif ?>" title="<?= GetMessage("MENU_ITEM_ACCESS_DENIED") ?>"><?= $arItem["TEXT"] ?></a></li>
+					<li class="<?= $liClass ?> item"><a href="" class="text-nowrap <? if ($arItem["SELECTED"]) : ?>selected<? else : ?><? endif ?>" title="<?= GetMessage("MENU_ITEM_ACCESS_DENIED") ?>"><?= $arItem["TEXT"] ?></a></li>
 				<? else : ?>
-					<li class="<?= $liClass ?>"><a href="" class="text-nowrap denied" title="<?= GetMessage("MENU_ITEM_ACCESS_DENIED") ?>"><?= $arItem["TEXT"] ?></a></li>
+					<li class="<?= $liClass ?> item"><a href="" class="text-nowrap denied" title="<?= GetMessage("MENU_ITEM_ACCESS_DENIED") ?>"><?= $arItem["TEXT"] ?></a></li>
 				<? endif ?>
 			<? endif ?>
 		<? endif ?>

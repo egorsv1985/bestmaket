@@ -99,7 +99,7 @@ global $ERROR_404;
                 <? else : ?>
                     <div class="header">
                         <div class="container">
-                            <div class="row align-items-center justify-content-between">
+                            <div class="row align-items-center justify-content-between w-100">
                                 <div class="col-5 d-none d-lg-block ">
                                     <div class="menu">
                                         <? $APPLICATION->IncludeComponent(
@@ -149,8 +149,8 @@ global $ERROR_404;
                                         ?>
                                     </div>
                                 </div>
-                                <div class="col-lg-1 col-5 header__open-menu">
-                                    <button class="open-menu header__burger burger button   gap-3 align-items-center  position-relative border-0 ">
+                                <div class="col-lg-1 col-4 header__open-menu">
+                                    <button class="open-menu header__burger burger button    align-items-center  position-relative border-0 ">
                                         <span class=" text-uppercase  fw-300 burger__text">МЕНЮ</span>
                                         <span class="burger__inner position-relative   d-flex justify-content-center align-items-center">
                                             <span></span>
@@ -158,9 +158,10 @@ global $ERROR_404;
                                     </button>
                                 </div>
                             </div>
-
-
-                            <div class="menu-mob ">
+                            
+                            
+                            <div class="menu-mob  ">
+                                <span class="  burger__text--menu position-absolute">МЕНЮ</span>
                                 <div class="menu__title">Макетная мастерская “Бэст Макет”</div>
                                 <? $APPLICATION->IncludeComponent(
                                     "bitrix:menu",

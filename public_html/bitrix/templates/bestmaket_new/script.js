@@ -47,20 +47,20 @@ $(document).ready(function () {
 		$(this).parent().fadeOut('fast')
 	})
 
+	$('.header .open-menu').click(function () {
+		$('.header .menu-mob').slideToggle()
+		$('.header').toggleClass('open')
+		$('body').toggleClass('no-scroll')
 
-$('.header .open-menu').click(function () {
-	$('.header .menu-mob').slideToggle()
-	$('.header').toggleClass('open')
+		var menuText = $(this).find('.text-uppercase')
+		if (menuText.text() === 'МЕНЮ') {
+			menuText.text('ЗАКРЫТЬ')
+		} else {
+			menuText.text('МЕНЮ')
+		}
 
-	var menuText = $(this).find('.text-uppercase')
-	if (menuText.text() === 'МЕНЮ') {
-		menuText.text('ЗАКРЫТЬ')
-	} else {
-		menuText.text('МЕНЮ')
-	}
-
-	return false
-})
+		return false
+	})
 	// Обработчик для кликов на элементы списка, содержащие подменю
 	$('ul.menu-mob__list > li')
 		.has('ul.submenu')
@@ -80,10 +80,27 @@ $('.header .open-menu').click(function () {
 
 	// Обработчик для кликов на ссылки в элементах списка с подменю
 	$('ul.menu-mob__list > li > a').click(function (event) {
-		if ($(this).siblings('ul.submenu').length > 0) {
+		var $submenu = $(this).siblings('ul.submenu') // Находим подменю, если оно есть
+		var $parentLi = $(this).parent() // Находим родительский элемент li
+
+		if ($submenu.length > 0) {
 			event.preventDefault() // Предотвращаем переход по ссылке, если у нее есть подменю
-			$(this).siblings('ul.submenu').stop(true, true).slideToggle(300) // Переключаем видимость подменю с анимацией
-			$(this).parent().toggleClass('item-open') // Добавляем/удаляем класс open для li
+
+			// Проверяем, открыто ли подменю
+			if ($parentLi.hasClass('item-open')) {
+				// Если подменю открыто, разрешаем переход по ссылке
+				window.location.href = $(this).attr('href')
+			} else {
+				// Закрываем все открытые подменю
+				$('ul.menu-mob__list > li.item-open')
+					.removeClass('item-open')
+					.children('ul.submenu')
+					.slideUp(300)
+
+				// Открываем текущее подменю
+				$submenu.stop(true, true).slideToggle(300) // Переключаем видимость подменю с анимацией
+				$parentLi.toggleClass('item-open') // Добавляем/удаляем класс open для li
+			}
 		}
 	})
 

@@ -1035,11 +1035,7 @@
 .instruments li:nth-child(1)::before {
 	top: 35%;
 }
-@media  (max-width: 400px)  {
-.instruments li:nth-child(1)::before {
-	top: 24%;
-}
-}
+
 .instruments li::before {
 	bottom: -24px;
 }
@@ -1102,63 +1098,102 @@
 }
 
 .menu-mob ul .submenu a {
-
-font-size: 18px;
-line-height: 1;
-	
+	font-size: 18px;
+	line-height: 1;
 }
 .menu-mob ul {
 	flex-direction: column;
 	font-size: 24px;
+	overflow-y: scroll;
 }
 .menu-mob ul a {
 	text-decoration: none;
 }
-.header.open .open-menu{
-	
+.menu-mob li.item::before {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 15%;
+	top: 50%;
+
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: all 0.3s ease-in-out;
 }
-.header.open .asd{
-	border:none;
-	
+.header.open .menu-mob li.item-open::before {
+	background-color: #8dce26;
+	top: 15px;
 }
-.menu-mob .second-item{
+.header.open .open-menu {
+}
+.header.open .asd {
+	border: none;
+}
+.menu-mob .second-item {
 	position: relative;
 	top: inherit;
 }
 
 .menu-mob .no-submenu:nth-child(6) {
-    position: relative;
-    right: inherit;
-		top: inherit;
+	position: relative;
+	right: inherit;
+	top: inherit;
 }
 .menu-mob .no-submenu:nth-child(7) {
-    position: relative;
-    right: inherit;
-    top: inherit ;
-}.header.open .burger__text{
-	font-size: 17px;
-
+	position: relative;
+	right: inherit;
+	top: inherit;
 }
-.menu__title{font-size: 12px;}
-.menu-mob{
-	padding-left: 20px;
-}.burger__text{
+.header.open .burger__text {
+	font-size: 17px;
+}
+.menu__title {
+	font-size: 12px;
+}
+
+.burger__text {
 	display: none;
 }
-.header.open .burger__text{
+.header.open .burger__text {
 	display: block;
 }
 .header.open .header__logo,
-.header.open .header__phones
-{
+.header.open .header__phones {
 	display: none;
 }
-.header.open .header__open-menu{
+.header.open .header__open-menu {
 	margin-left: auto;
 }
-.header.open{
+.header.open {
 	padding-block: 4px;
 }
-.header.open .menu-mob{
+.header.open .menu-mob {
 	padding-top: 20px;
+	overflow-y: scroll !important;
+}
+.header.open .container {
+	display: flex;
+}
+@media (max-width: 400px) {
+	.instruments li:nth-child(1)::before {
+		top: 24%;
+	}
+}
+@media (max-width: 360px) {
+	.header.open .burger__text {
+		display: none;
+	}
+}
+.burger__text--menu {
+	font-weight: 300;
+	font-size: 130px;
+	text-transform: uppercase;
+	color: #53a4d9;
+	transform: rotate(270deg);
+	opacity: 0;
+	right: -50%;
+	top: 60%;
+	transition: all 0.5s ease-in-out; 
 }
