@@ -826,7 +826,22 @@
 	height: 142px;
 }
 .main .flex-control-nav.flex-control-paging {
-	margin-top: 48px;
+	margin-top: 38px;
+}
+.main h1{
+	padding-inline: 4px;
+    line-height: 1.1;
+		margin-bottom: 50px;
+}
+.main-slider{
+	margin-bottom: 26px;
+}
+.main h2{
+	margin-bottom: 4px;
+}
+.main p{
+	line-height: 1.2;
+	margin-bottom: 0;
 }
 .portfolio__list {
 	flex-wrap: nowrap;

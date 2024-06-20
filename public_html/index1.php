@@ -29,24 +29,29 @@ $APPLICATION->SetTitle("Главная");
 	<div class="position-absolute circle4 overflow-hidden  animate-left-right3 ">
 
 	</div>
-	<div class="main__fon-text text-secondary position-absolute text-nowrap">Макетная мастерская</div>
+
+	<div class="main__fon-text text-secondary position-absolute text-nowrap" data-text="Макетная мастерская">Макетная мастерская</div>
+
 	<div class="container">
-		<h1 class="text-center fs-32 mb-5 fw-300">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
+		<h1 class="text-center fs-32  fw-300 position-relative">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
 		</h1>
 
-		<div class="main-slider position-relative mb-4 mb-lg-4">
+		<div class="main-slider position-relative ">
 			<ul class="slides">
-				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative d-flex justify-content-center" >
+					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative d-flex justify-content-center" >
+					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
+				<li class=" position-relative d-flex justify-content-center" >
+					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				<li class=" position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/main.png') no-repeat 50% / cover;">
-				</li>
+				
+				
 			</ul>
 		</div>
-		<h2 class="text-center fs-56 fw-600 text-uppercase mb-0 position-relative">Сделаем ваш макет точно по ТЗ</h2>
+		<h2 class="text-center fs-56 fw-600 text-uppercase  position-relative">Сделаем ваш макет точно по ТЗ</h2>
 		<p class="text-center fs-46 position-relative">даже если нет чертежей и сроки 🔥"горят"</p>
 	</div>
 </section>
@@ -98,7 +103,7 @@ $APPLICATION->SetTitle("Главная");
 		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
 		<p class="fs-48 fw-600 sample__desc mb-5 mb-lg-4">чтобы увидеть каким будет макет еще на старте работ</p>
 		<div class="d-flex sample__box flex-column flex-lg-row">
-			<div class="sample__box-content">				
+			<div class="sample__box-content">
 				<div class="sl-container">
 					<div class="view view-after">
 						<img src="<?= SITE_TEMPLATE_PATH; ?>/images/eskiz-black.png" alt="До" />
@@ -489,53 +494,53 @@ $APPLICATION->SetTitle("Главная");
 <? if ($USER->IsAdmin() || true) : ?>
 	<section class="main-makets py-5">
 		<div class="container">
-			
-				
-					<h2 class="title">
-						Виды макетов
-					</h2>
-					<div class="layouts-items d-flex flex-wrap ">
-						<?
-						$arFilter = array('IBLOCK_ID' => 13, 'ACTIVE' => 'Y');
-						$rsSections = CIBlockSection::GetList(array('SORT' => 'ASC'), $arFilter);
-						$key = 0;
-						while ($arSection = $rsSections->Fetch()) : ?>
-							<div class="layouts-item py-4 d-flex flex-column position-relative" id="section-<?= $arSection['ID']; ?>">
-								<div class="mb-4">
-									<img src="<?= CFile::GetPath($arSection['PICTURE']); ?>" width="35" height="35" alt="" class="">
-								</div>
-								<div class="name mb-4"><?= $arSection['NAME'];  ?></div>
-								<ul class="item-list">
-									<?
-									$arFilter = array(
-										"IBLOCK_ID" => $arSection['IBLOCK_ID'],
-										"SECTION_ID" => $arSection['ID'],
-										"ACTIVE" => "Y",
-									);
-									$rsElements = CIBlockElement::GetList(array("SORT" => "ASC"), $arFilter, false);
-									$keyrow = 0;
-									while ($arElements = $rsElements->GetNext()) :
-										$keyrow++;
-										if ($keyrow == 3) : ?>
-											<li class="small ">
-												<button class="display-all" aria-label="показать все"></button>
-											</li>
-										<? endif; ?>
-										<li class="<?= ($keyrow > 2) ? 'none' : '' ?>">
-											<a href="<?= $arElements['DETAIL_PAGE_URL']; ?>" id="elements-<?= $arElements['ID']; ?>">
-												<?= $arElements['NAME']; ?>
-											</a>
-										</li>
-									<? endwhile; ?>
-								</ul>
-							</div>
-						<?
-							$key++;
-						endwhile; ?>
 
+
+			<h2 class="title">
+				Виды макетов
+			</h2>
+			<div class="layouts-items d-flex flex-wrap ">
+				<?
+				$arFilter = array('IBLOCK_ID' => 13, 'ACTIVE' => 'Y');
+				$rsSections = CIBlockSection::GetList(array('SORT' => 'ASC'), $arFilter);
+				$key = 0;
+				while ($arSection = $rsSections->Fetch()) : ?>
+					<div class="layouts-item py-4 d-flex flex-column position-relative" id="section-<?= $arSection['ID']; ?>">
+						<div class="mb-4">
+							<img src="<?= CFile::GetPath($arSection['PICTURE']); ?>" width="35" height="35" alt="" class="">
+						</div>
+						<div class="name mb-4"><?= $arSection['NAME'];  ?></div>
+						<ul class="item-list">
+							<?
+							$arFilter = array(
+								"IBLOCK_ID" => $arSection['IBLOCK_ID'],
+								"SECTION_ID" => $arSection['ID'],
+								"ACTIVE" => "Y",
+							);
+							$rsElements = CIBlockElement::GetList(array("SORT" => "ASC"), $arFilter, false);
+							$keyrow = 0;
+							while ($arElements = $rsElements->GetNext()) :
+								$keyrow++;
+								if ($keyrow == 3) : ?>
+									<li class="small ">
+										<button class="display-all" aria-label="показать все"></button>
+									</li>
+								<? endif; ?>
+								<li class="<?= ($keyrow > 2) ? 'none' : '' ?>">
+									<a href="<?= $arElements['DETAIL_PAGE_URL']; ?>" id="elements-<?= $arElements['ID']; ?>">
+										<?= $arElements['NAME']; ?>
+									</a>
+								</li>
+							<? endwhile; ?>
+						</ul>
 					</div>
-				
-			
+				<?
+					$key++;
+				endwhile; ?>
+
+			</div>
+
+
 		</div>
 	</section>
 <? endif; ?>
