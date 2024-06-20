@@ -14,7 +14,13 @@
 	display: none !important;
 }
 .header {
-	padding: 10px 0;
+	padding: 26px 0;
+}
+.header .container{
+	padding-right: 0;
+}
+.header__wrapper{
+	padding-left: 16px;
 }
 .header .logo {
 	/* float: left; */
@@ -1140,9 +1146,7 @@
 }
 .header.open .open-menu {
 }
-.header.open .asd {
-	border: none;
-}
+
 .menu-mob .second-item {
 	position: relative;
 	top: inherit;
@@ -1174,6 +1178,9 @@
 .header.open .header__logo,
 .header.open .header__phones {
 	display: none;
+}
+.header__phones{
+	padding: 0;
 }
 .header.open .header__open-menu {
 	margin-left: auto;

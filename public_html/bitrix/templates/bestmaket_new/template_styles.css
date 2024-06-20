@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: 'Futura';
 	font-display: swap;
 	src: url('fonts/FuturaCyrillicMedium.woff2') format('woff2'),
@@ -13,6 +13,54 @@
 		url('fonts/FuturaCyrillicBook.woff') format('woff'),
 		url('fonts/FuturaCyrillicBold.woff') format('woff'),
 		url('fonts/FuturaCyrillicBold.woff') format('woff');
+	font-style: normal;
+} */
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicMedium.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicMedium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicLight.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicLight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicHeavy.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicHeavy.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicDemi.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicDemi.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicBook.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicBook.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	font-display: swap;
+	src: url('fonts/FuturaCyrillicBold.woff2') format('woff2'),
+		url('fonts/FuturaCyrillicBold.woff') format('woff');
+	font-weight: 700;
 	font-style: normal;
 }
 
@@ -71,7 +119,10 @@ body.no-scroll {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 30px 0 25px;
+	padding: 34px 0 40px;
+}
+.header__wrapper {
+	padding-left: 35px;
 }
 .header .logo {
 	/* float: left; */
@@ -125,13 +176,9 @@ body.no-scroll {
 	line-height: 20px;
 	padding: 11px 22px;
 }
-.header .phones {
-	/*float: left;*/
-	/* font-size: 14px; */
-	/* font-weight: 300; */
-	/*width: 25%;*/
-	display: flex;
-	justify-content: space-between;
+.header__phones {
+	padding-top: 24px;
+    padding-left: 20px;
 }
 .header .phones .phone {
 	/* float: left; */
@@ -152,15 +199,18 @@ body.no-scroll {
 }
 .header .phones .open-popup {
 	color: #167ec2;
-	font-size: 17px;
+	font-size: 16px;
 }
 .header .open-menu {
 	display: flex;
 	background-color: transparent;
 	gap: 12px;
 	margin-left: auto;
-
+	z-index: 500;
 	height: 50px;
+}
+.header__open-menu{
+	padding-right: 0;
 }
 .header .menu {
 	justify-content: space-between;
@@ -177,6 +227,7 @@ body.no-scroll {
 	list-style: none;
 	/* width: 100%; */
 	display: flex;
+	gap: 54px;
 	font-size: 20px;
 	font-weight: 300;
 	justify-content: space-between;
@@ -1177,15 +1228,7 @@ body.no-scroll {
 	font-size: 11.8em;
 	font-weight: bold;
 }
-.clients-main .large-title {
-	padding: 35px 0 30px;
-	position: relative;
-	z-index: 10;
-	color: #5d5d5d;
-	font-size: 2.25em;
-	text-transform: uppercase;
-	font-weight: 300;
-}
+
 .clients-main .large-title small {
 	display: block;
 	font-size: 0.5em;
@@ -5401,6 +5444,8 @@ input:focus {
 }
 .number-items {
 	row-gap: 44px;
+	max-width: 1320px;
+	margin-inline: auto;
 }
 
 .number__box {
@@ -5971,7 +6016,7 @@ input:focus {
 	top: 0;
 	max-height: 100dvh;
 	left: 0;
-	z-index: -1;
+	z-index: 100;
 	right: 0;
 	padding-top: 48px;
 	padding-left: 48px;
@@ -6035,7 +6080,7 @@ input:focus {
 .header.open .open-menu {
 	background-color: transparent;
 }
-.header.open .asd {
+.asd {
 	border: none;
 }
 .menu-mob .second-item {
@@ -6203,18 +6248,16 @@ input:focus {
 	height: 50px;
 	color: #167ec2;
 	cursor: pointer;
-	
+
 	border-radius: 50%;
 	border: 0.5px solid #167ec2;
 	background-color: #167ec2;
-	
 }
 
 .scroll-up:hover {
 	background-color: #8dce26;
 	border-color: #8dce26;
 }
-
 
 .header {
 	animation: add-shadow linear both;
@@ -6242,12 +6285,21 @@ input:focus {
 		opacity: 0;
 		transform: translateY(25px);
 		visibility: hidden;
-		
 	}
 	to {
 		opacity: 1;
 		visibility: visible;
-		
+
 		transform: translateY(0);
+	}
+}
+@media (min-width: 1200px) {
+	.header .container-xxl,
+	.header .container-xl,
+	.header .container-lg,
+	.header .container-md,
+	.header .container-sm,
+	.header .container {
+		max-width: 1450px;
 	}
 }

@@ -31,7 +31,7 @@ $APPLICATION->SetTitle("Главная");
 	</div>
 	<div class="main__fon-text text-secondary position-absolute text-nowrap">Макетная мастерская</div>
 	<div class="container">
-		<h1 class="text-center fs-32 mb-5">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
+		<h1 class="text-center fs-32 mb-5 fw-300">Изготовление архитектурных и промышленных макетов<br>Доставка по России и СНГ
 		</h1>
 
 		<div class="main-slider position-relative mb-4 mb-lg-4">
@@ -542,14 +542,14 @@ $APPLICATION->SetTitle("Главная");
 
 <section class="why-work py-5">
 	<div class="container">
-		<h2 class="fs-64 mb-5">Почему Вам стоит работать с нами</h2>
+		<h2 class="fs-64 mb-5 fw-300">Почему Вам стоит работать с нами</h2>
 		<div class="why-work__content">
-			<div class="fs-24 why-work__text why-work__text--left px-3 px-lg-4 py-4 py-lg-5 position-relative"><strong>Макетная мастерская “Бэст
+			<div class="fs-24 fw-300 why-work__text why-work__text--left px-3 px-lg-4 py-4 py-lg-5 position-relative"><strong class="fw-400">Макетная мастерская “Бэст
 					макет”.</strong> Мы
 				изготавливаем качественные архитектурные, интерактивные и промышленные макеты для выставок, презентаций и
 				в
 				офисы продаж.</div>
-			<div class="fs-24 why-work__text why-work__text--right py-5 px-4 ps-lg-5 pe-lg-4 position-relative">
+			<div class="fs-24 fw-300 why-work__text why-work__text--right py-5 px-4 ps-lg-5 pe-lg-4 position-relative">
 				<p>Архитектурные, промышленные и интерактивные макеты - наиболее мощный по силе воздействия инструмент
 					продвижения жилой и коммерческой недвижимости, промышленных и других объектов. Макет продемонстрирует
 					преимущества и особенности проекта, поможет произвести наиболее сильное впечатление на клиента или
@@ -569,7 +569,7 @@ $APPLICATION->SetTitle("Главная");
 	<div class="container">
 		<h2 class="fs-36 instruments__title fw-300 mb-5 ">Какими инструментами наша макетная <span>мастерская</span> <span>решит</span> Вашу задачу?
 		</h2>
-		<ul class="fs-24 d-flex flex-column  instruments__list">
+		<ul class="fs-24 d-flex flex-column  instruments__list fw-300">
 			<li>Опыт. 9 лет создаем макеты. Реализовали более 200 проектов. </li>
 			<li>Отлаженная технология удаленного согласования и отчетности при разработке архитектурного макета.</li>
 			<li>Производство макета с учетом мельчайших деталей проекта.</li>
@@ -584,13 +584,13 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="advantages py-5">
 	<div class="container">
-		<h2 class="fs-36 mb-3 advantages__title d-lg-none ">Ещё 3 очевидных преимущества</h2>
+		<h2 class="fs-36 mb-3 advantages__title d-lg-none fw-300">Ещё 3 очевидных преимущества</h2>
 		<div class="advantages__content d-flex gap-lg-5 align-items-lg-end ">
 			<div class="advantages__box-img">
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/advantage.png" alt="" class="">
 			</div>
 			<div class="advantages__box-text pb-3">
-				<h2 class="fs-36 mb-5 advantages__title d-none d-lg-block ">Ещё 3 очевидных преимущества</h2>
+				<h2 class="fs-36 mb-5 advantages__title d-none d-lg-block fw-300">Ещё 3 очевидных преимущества</h2>
 				<ul class="d-flex fs-20 justify-content-between  flex-column flex-lg-row">
 					<li class="">Готовы сделать срочный проект!</li>
 					<li class="">Отдельная рабочая группа на каждый проект</li>

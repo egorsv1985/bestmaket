@@ -99,8 +99,8 @@ global $ERROR_404;
                 <? else : ?>
                     <header class="header">
                         <div class="container">
-                            <div class="row align-items-center justify-content-between w-100">
-                                <div class="col-5 d-none d-lg-block ">
+                            <div class="row align-items-center justify-content-between w-100 header__wrapper">
+                                <div class="col-5 d-none d-xl-block ">
                                     <div class="menu">
                                         <? $APPLICATION->IncludeComponent(
                                             "bitrix:menu",
@@ -122,7 +122,7 @@ global $ERROR_404;
                                         ); ?>
                                     </div>
                                 </div>
-                                <div class="col-6 col-lg-3 header__logo">
+                                <div class="col-7 col-lg-2 header__logo">
 
                                     <? if ($APPLICATION->GetCurPage() == '/') : ?>
                                         <span class="logo   text-center">
@@ -134,7 +134,7 @@ global $ERROR_404;
                                         </a>
                                     <? endif; ?>
                                 </div>
-                                <div class="col-2 col-xl-3 header__phones">
+                                <div class="col-2 col-lg-5 col-xl-3 header__phones d-block">
                                     <div class="d-lg-none">
                                         <a href="tel:88007778504" class="phone-link callibri_phone_800 text-nowrap" title="88007778504">
                                             <img src="<?= SITE_TEMPLATE_PATH; ?>/images/phone.svg" alt=" phone" class="">
@@ -149,7 +149,7 @@ global $ERROR_404;
                                         ?>
                                     </div>
                                 </div>
-                                <div class="col-lg-1 col-4 header__open-menu">
+                                <div class="col-lg-2 col-3 header__open-menu">
                                     <button class="open-menu header__burger burger button    align-items-center  position-relative border-0 " aria-label="открыть меню" >
                                         <span class=" text-uppercase  fw-300 burger__text">МЕНЮ</span>
                                         <span class="burger__inner position-relative   d-flex justify-content-center align-items-center">
