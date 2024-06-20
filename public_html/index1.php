@@ -147,7 +147,7 @@ $APPLICATION->SetTitle("Главная");
 			</div>
 			<div class="sample__links position-relative d-flex flex-column ">
 				<div class="fs-25 sample__mess">Напишите в мессенджер, обсудим проект</div>
-				<div class="d-flex flex-column gap-5">
+				<div class="d-flex flex-column sample__wrapper">
 
 					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--tg position-relative ">Написать в Telegram</a>
 					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--whatsapp position-relative ">Написать в WhatsApp</a>
