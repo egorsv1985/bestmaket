@@ -38,17 +38,17 @@ $APPLICATION->SetTitle("Главная");
 
 		<div class="main-slider position-relative ">
 			<ul class="slides">
-				<li class=" position-relative d-flex justify-content-center" >
+				<li class=" position-relative d-flex justify-content-center">
 					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				<li class=" position-relative d-flex justify-content-center" >
+				<li class=" position-relative d-flex justify-content-center">
 					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				<li class=" position-relative d-flex justify-content-center" >
+				<li class=" position-relative d-flex justify-content-center">
 					<img src="<?= SITE_TEMPLATE_PATH; ?>/images/main.png" alt="">
 				</li>
-				
-				
+
+
 			</ul>
 		</div>
 		<h2 class="text-center fs-56 fw-600 text-uppercase  position-relative">Сделаем ваш макет точно по ТЗ</h2>
@@ -98,7 +98,7 @@ $APPLICATION->SetTitle("Главная");
 		); ?>
 	</div>
 </section>
-<section class="sample py-5">
+<section class="sample ">
 	<div class="container">
 		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
 		<p class="fs-48 fw-600 sample__desc mb-5 mb-lg-4">чтобы увидеть каким будет макет еще на старте работ</p>
@@ -149,14 +149,14 @@ $APPLICATION->SetTitle("Главная");
 				<div class="fs-25 sample__mess">Напишите в мессенджер, обсудим проект</div>
 				<div class="d-flex flex-column sample__wrapper">
 
-					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--tg position-relative ">Написать в Telegram</a>
-					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--whatsapp position-relative ">Написать в WhatsApp</a>
+					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--tg position-relative  "> <span class="position-relative">Написать в Telegram</span> </a>
+					<a href="" class="sample__link d-inline-block fs-30 fw-500 sample__link--whatsapp position-relative  "> <span class="position-relative">Написать в WhatsApp</span> </a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="number py-5">
+<section class="number-section ">
 	<? $APPLICATION->IncludeComponent(
 		"bitrix:news.list",
 		"number",

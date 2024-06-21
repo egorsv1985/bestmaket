@@ -21,7 +21,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 
 <div class="works-tab tabs">
-	<ul class="portfolio__list tabs   mb-4 d-flex portfolio__list ">
+	<ul class="portfolio__list tabs    d-flex portfolio__list ">
 		<? foreach ($arResult['SECTIONS'] as $key => &$arSection) : ?>
 
 			<?
@@ -31,7 +31,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 			?>
 
 			<li class=" <?= ($key == 0 ? 'active ' : ''); ?>item<?= $arSection['ID']; ?>" id="<?= $this->GetEditAreaId($arSection['ID'] . '-item'); ?>">
-				<a href="#" class="fs-20 fw-500 text-nowrap">
+				<a href="#" class="fs-20 fw-400 text-nowrap">
 					<?= $arSection['NAME']; ?>
 				</a>
 			</li>
@@ -152,12 +152,12 @@ $arCurView = $arViewStyles[$arParams['VIEW_MODE']];
 		$this->AddDeleteAction($arResult['SECTION']['ID'], $arResult['SECTION']['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
 
 	?><h1 class="<? echo $arCurView['TITLE']; ?>" id="<? echo $this->GetEditAreaId($arResult['SECTION']['ID']); ?>"><a href="<? echo $arResult['SECTION']['SECTION_PAGE_URL']; ?>"><?
-																																																																																																														echo (
-																																																																																																															isset($arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]) && $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"] != ""
-																																																																																																															? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
-																																																																																																															: $arResult['SECTION']['NAME']
-																																																																																																														);
-																																																																																																														?></a></h1><?
+																																																																																									echo (
+																																																																																										isset($arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]) && $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"] != ""
+																																																																																										? $arResult['SECTION']["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]
+																																																																																										: $arResult['SECTION']['NAME']
+																																																																																									);
+																																																																																									?></a></h1><?
 																																																																																																																			}
 																																																																																																																			if (0 < $arResult["SECTIONS_COUNT"]) {
 																																																																																																																				?>

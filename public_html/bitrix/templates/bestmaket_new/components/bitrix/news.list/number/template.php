@@ -13,17 +13,17 @@
 $this->setFrameMode(true);
 ?>
 
-<div class="number-items pt-5 ">
-	<div class="number-item title">
-		<h2 class="fs-72 number__title"> Цифры / Факты
+<div class="number-items  ">
+	<div class="number-item title position-relative">
+		<h2 class="fs-72 number__title fw-300">Цифры<span class=" position-absolute ">/ Факты</span>
 
 		</h2>
 	</div>
 	<div class="number-item large">
-		<div class="number-container" style="background-image:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts1.png'); background-repeat: no-repeat"></div>
+		<div class="number-container" style="background:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts1.png') no-repeat center / cover"></div>
 	</div>
 	<div class="number-item small">
-		<div class="number-container" style="background-image:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts2.png'); background-repeat: no-repeat"></div>
+		<div class="number-container" style="background:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts2.png') no-repeat center / cover"></div>
 	</div>
 	<div class="number__box d-flex flex-wrap justify-content-between position-relative">
 
@@ -48,21 +48,21 @@ $this->setFrameMode(true);
 					реализованных макетов </div>
 			</div>
 		</div>
-		<div class="number-item blue border-right">
+		<div class="number-item blue border-right pt-5">
 			<div class="number-container">
 				<div class="number fw-300">80</div>
 				<div class="name">
 					ГОРОДОВ, В КОТОРЫЕ ДОСТАВЛЕН МАКЕТ </div>
 			</div>
 		</div>
-		<div class="number-item green border-right">
+		<div class="number-item green border-right pt-5">
 			<div class="number-container">
 				<div class="number fw-300">35</div>
 				<div class="name">
 					СПЕЦИАЛИСТОВ В ШТАТЕ </div>
 			</div>
 		</div>
-		<div class="number-item blue">
+		<div class="number-item blue pt-5">
 			<div class="number-container">
 				<div class="number fw-300">147</div>
 				<div class="name">

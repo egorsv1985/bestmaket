@@ -56,15 +56,15 @@ unset($arItem);
 
 
 
-		<div class="work-item portfolio__item item<?= $key++; ?>" id="<?= $this->GetEditAreaId($arItem['ID'] . '-item'); ?>">
-			<a href="<?= $arItem['DETAIL_PAGE_URL']; ?>">
+		<div class="work-item portfolio__item h-100 item<?= $key++; ?>" id="<?= $this->GetEditAreaId($arItem['ID'] . '-item'); ?>">
+			<a href="<?= $arItem['DETAIL_PAGE_URL']; ?>" class="d-block h-100">
 				<div class="portfolio__box d-flex flex-column">
 
 					<div class="portfolio__box-img">
 						<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="">
 					</div>
-					<div class="portfolio__content mb-5 d-flex ">
-						<div class="portfolio__num "><?= $key++ ?></div>
+					<div class="portfolio__content  d-flex ">
+						<div class="portfolio__num ">0<?= $key++ ?></div>
 						<div class="portfolio__text "><?= $arItem['NAME']; ?></div>
 					</div>
 					<div class="portfolio__title "><?= $arItem['SECTION_NAME']; ?></div>
