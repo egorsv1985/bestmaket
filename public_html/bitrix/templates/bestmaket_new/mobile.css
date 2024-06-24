@@ -1258,26 +1258,64 @@
 .content.expanded .toggle-button {
 	display: none;
 }
+.main-makets {
+	padding-block: 48px;
+}
+.main-makets .title{
+	font-size: 42px;
+	margin-bottom: 56px;
+	line-height: 1;
+}
+.layouts-item ul li.small {
+    right: 10px;
+    top: 20px;
+    
+}
+.layouts-items{
+	padding-left: 0;
+	gap: 16px;
+}
+.why-work{
+	padding-block: 52px;
+}
+
+.why-work .title{
+	font-size: 42px;
+	line-height: .9;
+}
 .why-work__text--left {
 	max-width: 100%;
 
 	margin-left: 16px;
+	padding: 30px 30px 38px 10px;	
+        line-height: 1.0;
 }
 .why-work__text--left strong {
 	display: block;
 	margin-bottom: 24px;
+	padding-right: 10px;
 }
 .why-work__text--right::before {
-	left: 1%;
-	right: -3%;
-	top: -21%;
-	bottom: 5%;
+	        left: 1%;
+        right: -4%;
+        top: -12%;
+        bottom: 5%;
+}
+.why-work__text--right p {
+	margin-bottom: 0;
 }
 .why-work__text--right {
-	max-width: 100%;
-	margin-top: 12px;
-	margin-left: inherit;
-	margin-right: 10px;
+	        max-width: 100%;
+        margin-top: 20px;
+        margin-left: inherit;
+        margin-right: 20px;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 4px;
+        padding-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 }
 .why-work__text--right::after {
 	content: '';
@@ -1303,12 +1341,18 @@
 	bottom: 0%;
 	width: 25%;
 }
+.instruments{
+	padding-block: 8px;
+}
 .instruments__title {
 	max-width: 100%;
+	font-size: 42px;
+	padding-left: 10px;
+	margin-bottom: 56px;
 }
 .instruments__list {
-	padding-left: 16px;
-	gap: 20px;
+	padding-left: 26px;
+	gap: 30px;
 }
 .instruments li {
 	padding-left: 32px;
@@ -1322,7 +1366,7 @@
 }
 
 .instruments li::before {
-	bottom: -24px;
+	bottom: -32px;
 }
 .instruments li:last-child::before {
 	bottom: 80%;
