@@ -230,9 +230,9 @@ $APPLICATION->SetTitle("Главная");
 	); ?>
 
 </section>
-<section class="request-calc-2 py-lg-5 py-4 blue">
+<section class="request-calc-2  blue">
 	<div class="container">
-		<h2 class="title fs-64 mb-5">
+		<h2 class="title fs-64 ">
 			<?
 			$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
 				'NAME' => 'текст',
@@ -272,9 +272,9 @@ $APPLICATION->SetTitle("Главная");
 					"MAX_USER_ENTRIES" => "100000",
 					"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
 					"PROPERTY_CODES" => array(
-						0 => "1",
-						1 => "2",
-						2 => "8",
+						0 => "8",
+						1 => "1",
+						2 => "2",
 						3 => "NAME",
 					),
 					"PROPERTY_CODES_REQUIRED" => array(
@@ -293,9 +293,9 @@ $APPLICATION->SetTitle("Главная");
 				false
 			); ?>
 		</div>
-		<div class="d-flex mtn-5 flex-column flex-lg-row justify-content-end gap-5">
+		<div class="d-flex flex-column flex-lg-row justify-content-end  request-calc-2__wrapper">
 			<div class="messenger__text">или напишите в мессенджер</div>
-			<ul class="messenger__list d-flex gap-4">
+			<ul class="messenger__list d-flex ">
 				<li>
 					<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
 				</li>

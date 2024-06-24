@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 	<div class="number-item small">
 		<div class="number-container" style="background:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts2.png') no-repeat center / cover"></div>
 	</div>
-	<div class="number__box d-flex flex-wrap justify-content-between position-relative">
+	<div class="number__box d-flex flex-wrap  position-relative">
 
 		<div class="number-item green border-right">
 			<div class="number-container">

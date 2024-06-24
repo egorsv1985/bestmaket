@@ -50,7 +50,7 @@ else
 		</div>
 	<? endif ?>
 
-	<form class="d-flex flex-wrap gap-4" name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" data-id="<?= $arParams['FORM_ID']; ?>">
+	<form class="d-flex flex-wrap " name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data" data-id="<?= $arParams['FORM_ID']; ?>">
 		<input type="hidden" name="formID" value="<?= $arResult["formID"]; ?>">
 		<input type="text" class="hidden" name="lastname" value="">
 		<?= bitrix_sessid_post() ?>

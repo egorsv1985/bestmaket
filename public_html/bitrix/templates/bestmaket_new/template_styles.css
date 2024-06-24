@@ -419,11 +419,11 @@ body.no-scroll {
 	box-shadow: none;
 }
 .form-green .form-row {
-	margin: 10px 0 20px;
+	/* margin: 10px 0 20px; */
 }
 .form-green .form-row .row-name {
 	display: block;
-	padding-bottom: 4px;
+	/* padding-bottom: 4px; */
 }
 .form-green .form-row .inp-text {
 	font-size: inherit;
@@ -433,7 +433,7 @@ body.no-scroll {
 	min-width: 100%;
 	color: #fff;
 	font-weight: 300;
-	padding: 4px 0;
+	padding: 0;
 	width: 100%;
 	background: none;
 	border: none;
@@ -474,30 +474,24 @@ body.no-scroll {
 	display: block;
 }
 .form-green .private {
-	padding: 20px 0 10px;
+	padding: 0;
 	font-size: 0.6em;
+	margin-top: -4px;
+    line-height: 1.3;
+    letter-spacing: 0px;
 }
 .form-green .private .check {
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 	font-weight: bold;
 }
 .form-blue .private {
 	color: #b0cbd9;
 }
 .form-green .form-submit {
-	text-align: center;
-	margin-top: 10px;
+	    margin-left: 6px;
+    align-self: flex-end;
 }
-.form-green .form-submit button {
-	font-size: inherit;
-	font-family: inherit;
-	color: #000;
-	cursor: pointer;
-	background: #fff;
-	padding: 9px 20px;
-	border: none;
-	border-radius: 20px;
-}
+
 .form-green .form-submit button:hover {
 	background: #ececec;
 }
@@ -902,40 +896,25 @@ body.no-scroll {
 .number-item .number {
 	/* font-weight: 100; */
 	color: #7cc118;
-	font-size: 5.53em;
+	font-size: 96px;
 	line-height: 120px;
 }
 .number-item .name {
-	height: 2.5em;
+	
 	position: relative;
-	transition: top 0.2s ease;
+	transition: all 0.3s ease-in-out;
+	padding-left: 6px;
+    margin-top: 4px;
 }
 .number-item .number {
-	transition: padding-left 0.2s ease-out;
+	transition: all 0.3s ease-in-out;
 }
 .number-item.blue .number {
 	color: #2c80c5;
 }
-.number-item .number-contaner {
-	transition: background-size 0.2s ease-out;
-	display: block;
-	height: 164px;
-	background-position: 50% 50%;
-	background-size: auto 100%;
-	padding: 10px 20px 20px;
-	border-bottom: 1px solid #c4c6c8;
-	border-right: 1px solid #c4c6c8;
-}
-.number-item .number-contaner:hover {
-	background-size: auto 105%;
-}
-.number-item .number-contaner:hover .name {
-	position: relative;
-	top: -5px;
-}
-.number-item .number-contaner:hover .number {
-	padding-left: 10px;
-}
+
+
+
 .data-list {
 	font-size: 1.14em;
 	line-height: 1.25em;
@@ -3581,7 +3560,8 @@ sidebar li.selected a { color: #000; }
 }
 .form-green .private .check label {
 	padding-left: 30px;
-	background: url('images/ico-checkbox.png') 0 0 no-repeat;
+	background: url('images/ico-checkbox.png') 0 22% no-repeat;
+	background-size: 16px
 }
 .form-green .private .check label a:hover {
 	/* color: #fff; */
@@ -4171,9 +4151,7 @@ sidebar li.selected a { color: #000; }
 .number-items .number-item .number-contaner {
 	height: 100%;
 }
-.number-items .number-item .name {
-	height: auto;
-}
+
 
 .block-number.block-large .block-number-text {
 	font-size: 1.125em;
@@ -5444,9 +5422,7 @@ input:focus {
 	color: #337ab7;
 	font-weight: bold;
 }
-@media screen and (max-width: 600px) {
-	
-}
+
 .dr-circle svg {
 	top: 50%;
 	transform: translateY(-50%);
@@ -5461,18 +5437,18 @@ input:focus {
 	padding-bottom: 96px;
 	padding-top: 85px;
 }
-.number-items .number-item .number-container {
-	height: 100%;
-}
-.number-item .number-container:hover {
-	background-size: auto 105%;
+
+.number-item.large .number-container:hover,
+.number-item.small .number-container:hover
+ {
+	scale: 1.05;
 }
 .number-item .number-container:hover .name {
 	position: relative;
-	top: -5px;
+	transform: translateY(-5px);
 }
 .number-item .number-container:hover .number {
-	padding-left: 10px;
+	transform: translateX(10px);
 }
 
 .number-item .number__title {
@@ -5490,7 +5466,7 @@ input:focus {
     text-transform: none;
 }
 .number-item.title span{
-	    right: 13%;
+	    left: 41%;
     bottom: 31%;
 }
 .number-item.large {
@@ -5509,11 +5485,12 @@ input:focus {
 
 .number__box {
 	width: 60%;
-	/* padding-left: 44px; */
-	column-gap: 5px;
+	
+	column-gap: 60px;
 }
 .number__box .number-item {
 	width: 25%;
+	/* padding-bottom: 20px; */
 }
 .number .name {
 	font-size: 22px;
@@ -5521,13 +5498,18 @@ input:focus {
 }
 
 .number-item .number-container {
-	transition: background-size 0.2s ease-out;
+	transition: all 0.2s ease-out;
 	display: block;
-
 	background-position: 50% 50%;
 	background-size: auto 100%;
-
+	height: 100%;
+	
 	/* border-bottom: 1px solid #c4c6c8; */
+}
+.number-item:nth-child(4) .number-container,
+.number-item:nth-child(5) .number-container, 
+.number-item:nth-child(6) .number-container {
+	padding-top: 40px;
 }
 .border-right {
 	border-right: 1px solid #d9d9d9;
@@ -5570,6 +5552,15 @@ input:focus {
 }
 .request-calc-2.blue {
 	background-color: #167ec2;
+	padding-block: 30px;
+}
+.request-calc-2.blue .request-calc-2__wrapper {
+	    margin-bottom: 40px;
+    padding-right: 94px;
+    gap: 92px;
+}
+.request-calc-2.blue .container {
+	max-width: 1426px;
 }
 .request-calc-2.gray {
 	background-color: #f6f6f6;
@@ -5589,6 +5580,13 @@ input:focus {
 .request-calc-2.gray .title {
 	color: #000;
 }
+.request-calc-2.blue .title {
+	margin-bottom: 66px;
+}
+.request-calc-2.blue form {
+	padding-left: 12px;
+	gap: 32px;
+}
 .form-green .file-upload .text-label {
 	display: block;
 	border: 1px solid #000;
@@ -5604,21 +5602,17 @@ input:focus {
 	max-width: 250px;
 }
 .form-green .form-row {
-	margin-bottom: 0;
-	margin-top: auto;
+	/* margin-bottom: 0;
+	margin-top: auto; */
 }
-.form-green .form-submit {
-	text-align: center;
-	margin-bottom: 0;
-	margin-top: auto;
-}
+
 .form-green .form-submit button {
 	font-size: 24px;
 	font-family: inherit;
 	color: #fff;
 	cursor: pointer;
 	background-color: #8dce26;
-	padding: 12px 60px;
+	padding: 10px 60px;
 	border: none;
 	border-radius: 27px;
 }
@@ -5628,9 +5622,9 @@ input:focus {
 	border: 1px solid #8dce26;
 }
 .form-green .private .check {
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 	font-weight: 300;
-	max-width: 57%;
+	max-width: 54%;
 }
 .clients-main .large-title {
 	padding: 0;
@@ -5927,6 +5921,7 @@ input:focus {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	gap: 20px;
 }
 .main-contacts .messenger__list a,
 .request-calc-2 .messenger__list a {
@@ -5968,9 +5963,9 @@ input:focus {
 .request-calc-2 .messenger__list a.whatsapp:hover:before,
 .request-calc-2 .messenger__list a.tg:hover:before {
 	top: 50%;
-	left: 50%;
-	right: inherit;
-	transform: translate(-50%, -50%);
+	
+	right: -50%;
+	transform: translate(-25%, -50%);
 	width: 50px;
 	height: 50px;
 }

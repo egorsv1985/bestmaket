@@ -275,13 +275,38 @@
 	width: auto;
 	padding: 0;
 }
+.request-calc-2.blue{
+	padding-block: 20px;
+}
+.request-calc-2.blue form{
+	gap: 20px;
+}
+.request-calc-2.blue .title{
+	font-size: 36px;
+	margin-bottom: 50px;
+}
 .request-calc-2 .form-contaner {
 	float: none;
 	width: auto;
 	margin: 15px 0 0;
 }
+.form-green .form-row{
+	width: 100%;
+}
+.form-green .form-row .row-name{
+	margin-bottom: 4px;
+}
+.form-green .form-row label{
+	width: 100%;
+}
+.form-green .file-upload{
+	max-width: 215px;
+    margin-top: -32px;
+	
+}
 .number-section{
 	padding-top: 100px;
+	padding-bottom: 86px;
 }
 
 .number-item {
@@ -995,7 +1020,7 @@
 	width: 100%;
 }
 .number-item.title span {
-    right: 12%;
+    left: 33%;
     bottom: 6%;
 }
 .number-item .number__title {
@@ -1052,7 +1077,7 @@
 	width: 75%;
 }
 .number__box .number-item:nth-child(5) .number{
-	margin-top: 4px;
+	margin-top: 18px;
 }
 
 .number__box .number-item:nth-child(4) {
@@ -1073,21 +1098,37 @@
 	padding-left: 10px;
 }
 .number-items .number-item.large .number-container {
-	padding-bottom: 43%;
-	background-size: cover;
+	padding-bottom: 46%;
+	
 }
 .number-item.large {
-	margin-right: 32px;
+	margin-right: 44px;
+	margin-top: 10px;
 }
 .number-item .pt{
 	padding-top:12px;
+}
+.number-item:nth-child(4) .number-container,
+.number-item:nth-child(5) .number-container, 
+.number-item:nth-child(6) .number-container {
+	padding-top: 0;
 }
 .form-green .form-row .inp-text {
 	max-width: 100%;
 }
 .form-green .form-submit {
-	margin-top: 32px;
+	margin-top: 36px;
 	margin-inline: auto;
+	margin-bottom: 22px;
+}
+.form-green .private{
+	font-size: 11px;
+}
+.form-green .private .check label{
+	background-position-y: 10%;
+}
+.form-green .form-container{
+	margin-bottom: 28px;
 }
 .clients-slider .content {
 	position: relative;
