@@ -25,7 +25,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 			$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
 
 			if (CModule::IncludeModule("millcom.phpthumb")) {
-				$arSection['PICTURE']['SRC'] = CMillcomPhpThumb::generateImg($arSection['PICTURE']['SRC'], 7);
+				$arSection['PICTURE']['SRC'] = CMillcomPhpThumb::generateImg($arSection['PICTURE']['SRC'], 14);
 			}
 
 			if ($key >= $arParams['COUNT'] && $arParams['COUNT'] > 0)

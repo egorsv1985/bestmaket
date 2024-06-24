@@ -278,10 +278,11 @@
 .request-calc-2.blue{
 	padding-block: 20px;
 }
+.request-calc-2.gray form,
 .request-calc-2.blue form{
 	gap: 20px;
 }
-.request-calc-2.blue .title{
+.request-calc-2 .title{
 	font-size: 36px;
 	margin-bottom: 50px;
 }
@@ -398,6 +399,20 @@
 .service-tab .intro .title {
 	padding: 0 0 1em;
 }
+.clients-main .container{
+	padding-inline: 0;
+}
+.clients-main .large-title{
+	font-size: 42px;
+	margin-top: 28px;
+    padding-left: 5px;
+		margin-bottom: 75px;
+}
+.clients-main .large-title span{
+	display: block;
+	font-size: 30px;
+	margin-top: 4px;
+}
 .clients-slider .intro {
 	float: none;
 	width: auto;
@@ -412,6 +427,8 @@
 }
 .clients-slider .description {
 	padding: 24px;
+	padding-top: 30px;
+	
 	overflow: hidden;
 	overflow: hidden;
 	/* white-space: nowrap; */
@@ -421,6 +438,7 @@
 }
 .clients-list {
 	overflow-x: scroll;
+	padding-bottom: 92px;
 }
 .clients-list li {
 	float: none;
@@ -1130,10 +1148,56 @@
 .form-green .form-container{
 	margin-bottom: 28px;
 }
+.request-calc-2.gray{
+	padding-block: 22px;
+}
+
+.request-calc-2 .request-calc-2__wrapper{
+	padding-right: 0;
+	align-items: center;
+	gap: 54px;
+	margin-bottom: 24px;
+}
+.request-calc-2.gray .request-calc-2__wrapper{
+	padding-right: 0;
+	
+	gap: 54px;
+	margin-bottom: 24px;
+}
+.request-calc-2 .form-container{
+	margin-bottom: 28px;
+}
+.request-calc-2 .messenger__list li{
+	width: 73px;
+	height: 73px;
+}
+.request-calc-2 .messenger__list a.whatsapp::before, .request-calc-2 .messenger__list a.tg::before{
+	width: 50px;
+	height: 50px;
+	top: -28px;
+    right: -26px;
+}
+.request-calc-2 .messenger__list a.whatsapp:hover:before, .request-calc-2 .messenger__list a.tg:hover:before{
+	width: 100px;
+	height: 100px;
+	transform: translate(-22%, -50%);
+}
+.main-contacts .messenger__list, .request-calc-2 .messenger__list{
+	gap: 80px;
+}
+.clients-slider .slides{
+	display: flex;
+}
 .clients-slider .content {
 	position: relative;
 	bottom: inherit;
 	right: inherit;
+	margin-top: -15px;
+	margin-left: -10px;
+}
+.clients-slider .desc-box {
+	line-height: 1.2;
+	margin-bottom: 24px;
 }
 .clients-slider .intro {
 	position: relative;
@@ -1154,17 +1218,30 @@
 	padding-inline: 16px;
 	padding-bottom: 60px;
 }
+.clients-slider .slides .slider-contaner{
+	height: 100%;
+}
 .clients-slider .box {
-	padding: 14% 16px 12% 16px;
+	padding: 12% 16px 12% 16px;
 	margin-inline: auto;
 	width: 100% !important;
+	height: 100% !important;
 }
 .clients-slider .intro .letter img {
 	width: 100% !important;
 	box-shadow: none;
 }
 .clients-slider .intro .logo img {
-	height: 50px !important;
+	height: 102px !important;
+}
+.clients-main .flex-control-nav.flex-control-paging{
+	margin-top: 10px;
+}
+.clients-list .btn-all{
+	padding-top: 54px;
+}
+.clients-list ul{
+	overflow-x: scroll;
 }
 .toggle-button {
 	display: none;

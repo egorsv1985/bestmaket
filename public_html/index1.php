@@ -102,7 +102,7 @@ $APPLICATION->SetTitle("Главная");
 	<div class="container">
 		<h2 class="sample__title fs-48 fw-600 mb-0 position-relative d-inline-block">Получите 3D эскиз</h2>
 		<p class="fs-48 fw-600 sample__desc mb-5 mb-lg-4">чтобы увидеть каким будет макет еще на старте работ</p>
-		<div class="d-flex sample__box flex-column flex-lg-row">
+		<div class="d-flex sample__box flex-column flex-lg-row flex-wrap flex-lg-nowrap">
 			<div class="sample__box-content">
 				<div class="sl-container">
 					<div class="view view-after">
@@ -306,10 +306,10 @@ $APPLICATION->SetTitle("Главная");
 		</div>
 	</div>
 </section>
-<div class="clients-main py-5">
+<section class="clients-main pt-5">
 	<div class="container">
 		<div class="large-title fs-64">
-			Отзывы. Клиенты о нашей работе <small class="d-none d-lg-block">Что говорят люди, которые уже работают с нами?</small>
+			Отзывы. <span> Клиенты о нашей работе</span> <small class="d-none d-lg-block">Что говорят люди, которые уже работают с нами?</small>
 		</div>
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -414,10 +414,10 @@ $APPLICATION->SetTitle("Главная");
 			)
 		); ?>
 	</div>
-</div>
-<section class="request-calc-2 py-5 gray">
+</section>
+<section class="request-calc-2 gray">
 	<div class="container">
-		<h2 class="title fs-64 mb-5">
+		<h2 class="title fs-64 ">
 			<?
 			$APPLICATION->IncludeFile("/includes/calc-2-title.php", array(), array(
 				'NAME' => 'текст',
@@ -478,9 +478,9 @@ $APPLICATION->SetTitle("Главная");
 				false
 			); ?>
 		</div>
-		<div class="d-flex mtn-5 flex-column flex-lg-row justify-content-end gap-5 ">
+		<div class="d-flex flex-column flex-lg-row justify-content-end request-calc-2__wrapper">
 			<div class="messenger__text">или напишите в мессенджер</div>
-			<ul class="messenger__list d-flex gap-4 ">
+			<ul class="messenger__list d-flex ">
 				<li>
 					<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
 				</li>
@@ -492,7 +492,7 @@ $APPLICATION->SetTitle("Главная");
 	</div>
 </section>
 <? if ($USER->IsAdmin() || true) : ?>
-	<section class="main-makets py-5">
+	<section class="main-makets ">
 		<div class="container">
 
 
