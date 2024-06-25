@@ -99,7 +99,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			?>
 		<? endif; ?>
 	<? endif; ?>
-	<section class="main-contacts mt-5 py-5 overflow-hidden">
+	<section class="main-contacts  overflow-hidden">
 		<div class="container">
 			<div class="d-flex justify-content-between flex-column flex-lg-row">
 				<div class="main-contacts__box d-flex flex-column">
@@ -109,19 +109,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					</h2>
 
 					<div class="address">
-						199048, г.Санкт-Петербург,
+						199048, г.Санкт-Петербург,<br>
 						13-ая линия В.О., д.72, Арт-Муза.
 					</div>
 					<div class="phone d-flex flex-column">
 						<a href="tel:+78126470637" class="">+7 (812) 647-06-37</a>
-						<a href="tel:88007778504" class="">8 800 777 85 04</a>
+						<a href="tel:+78007778504" class="">+7 (800) 777-85-04</a>
 					</div>
 					<div class="schedule">
 						Пн-Пт. с 10.00 до 19.00
 					</div>
-					<div class="d-flex mb-5 flex-column flex-lg-row gap-3">
+					<div class="d-flex  flex-column flex-lg-row main-contacts__messenger-box">
 						<div class="messenger__text">или напишите в мессенджер</div>
-						<ul class="messenger__list d-flex gap-lg-2 gap-4">
+						<ul class="messenger__list d-flex align-items-center ">
 							<li>
 								<a href="#" aria-label="whatsapp" rel="nofollow" class="whatsapp" target="_blank"></a>
 							</li>
@@ -130,15 +130,15 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 							</li>
 						</ul>
 					</div>
-					<div class="main-contacts__text fs-24 mb-4 order-2 order-lg-0">
+					<div class="main-contacts__text main-contacts__text--small fs-24  order-2 order-lg-0">
 
 						<p>
 							Вы узнали немного о нашей команде, расскажите и вы немного о своей задаче, напишите свой вопрос или позвоните
 						</p>
 					</div>
-					<div class=" main-contacts__text main-contacts__text--big flex-column flex-lg-row d-flex align-items-lg-end order-1 order-lg-0">
-						<p>Будем рады знакомству. Сморите о нас в соц. сетях</p>
-						<ul class="social__list d-flex gap-3 ps-0">
+					<div class=" main-contacts__text main-contacts__text--big flex-column justify-content-between flex-lg-row d-flex align-items-lg-end order-1 order-lg-0">
+						<p>Будем рады знакомству.<br> Сморите о нас в соц. сетях</p>
+						<ul class="social__list d-flex ">
 							<li>
 								<a href="https://vk.com/bestmaket" rel="nofollow" class="vk" target="_blank"></a>
 							</li>
@@ -353,7 +353,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					));
 					?>
 				</div>
-				<div class="polity d-flex gap-3 flex-column flex-md-row">
+				<div class="polity d-flex  flex-column flex-md-row">
 					<a href="/policy.pdf" target="_blank">Соглашение о конфиденциальности.</a>
 					<div class="copy">
 						Разработка сайта <a href="https://target-kc.ru/" target="_blank" rel="nofollow">Таргет Консалт Компани</a>
@@ -378,7 +378,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 			<path class="scroll-up__svg-path" id="arrow_right-[#349]" d="M5.63 15.6L7.22 17.28L15.88 9.36L15.89 27.29L18.17 27.42L18.16 9.49L26.81 18.41L28.42 16.94C24.25 12.63 21.01 9.3 17.02 5.18L5.63 15.6Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd" />
 		</svg>
-		
+
 	</div>
 	<div class="popup">
 		<div id="popupOrder">

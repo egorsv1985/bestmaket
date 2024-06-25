@@ -1171,9 +1171,12 @@
 	height: 100px;
 	transform: translate(-22%, -50%);
 }
-.main-contacts .messenger__list,
+
 .request-calc-2 .messenger__list {
 	gap: 80px;
+}
+.main-contacts .messenger__list {
+	gap: 25px;
 }
 .clients-slider .slides {
 	display: flex;
@@ -1375,7 +1378,7 @@
 }
 .advantages{
 	padding-top: 70px;
-	padding-bottom: 40px;
+	padding-bottom: 97px;
 	
 }
 .advantages__title{
@@ -1413,21 +1416,49 @@
 .advantages li::before {
 	display: none;
 }
+.main-contacts{
+	padding-top: 44px;
+}
+.main-contacts .container{
+	padding-inline: 7px;
+}
+.main-contacts__box{
+	padding-left: 12px;
+}
+.main-contacts .large-title{
+	font-size: 42px;
+	padding-bottom: 0;
+	margin-bottom: 38px;
+}
 .main-contacts .address {
 	max-width: 100%;
-}
+	padding-left: 0;}
+	.main-contacts .phone{
+		padding-left: 0;
+		margin-bottom: 36px;
+	}
+	.main-contacts .schedule {
+		margin-bottom: 32px;
+	}
+	.main-contacts__messenger-box{
+		padding-left: 3px;
+		gap: 0;
+	}
 .main-contacts .messenger__list li {
 	width: 55px;
 	height: 55px;
 }
 .main-contacts .messenger__text {
-	margin-bottom: 30px;
+	margin-bottom: 24px;
 }
 .main-contacts .messenger__list {
 	padding-left: 0;
+	margin-bottom: 10px;
 }
 .main-contacts__text--big {
 	font-size: 28px;
+	padding-left: 4px;
+	gap: 20px;
 }
 .main-contacts__text {
 	max-width: 100%;
