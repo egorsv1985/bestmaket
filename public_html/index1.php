@@ -589,13 +589,13 @@ $APPLICATION->SetTitle("Главная");
 </section>
 <section class="advantages ">
 	<div class="container">
-		<h2 class="fs-36  advantages__title d-lg-none fw-300">Ещё 3 очевидных преимущества</h2>
+		<h2 class="advantages__title d-lg-none fw-300">Ещё 3 очевидных преимущества</h2>
 		<div class="advantages__content d-flex  align-items-lg-end ">
 			<div class="advantages__box-img">
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/advantage.png" alt="" class="">
 			</div>
 			<div class="advantages__box-text ">
-				<h2 class="fs-36  advantages__title d-none d-lg-block fw-300">Ещё 3 очевидных преимущества</h2>
+				<h2 class="  advantages__title d-none d-lg-block fw-300">Ещё 3 очевидных преимущества</h2>
 				<ul class="d-flex fs-20 justify-content-between  flex-column flex-lg-row">
 					<li class="">Готовы сделать срочный проект!</li>
 					<li class="">Отдельная рабочая группа на каждый проект</li>
