@@ -151,7 +151,7 @@ global $ERROR_404;
                                 </div>
                                 <div class="col-lg-2 col-3 header__open-menu">
                                     <button class="open-menu header__burger burger button    align-items-center  position-relative border-0 " aria-label="открыть меню" >
-                                        <span class=" text-uppercase  fw-300 burger__text">МЕНЮ</span>
+                                        <span class="  fw-300 burger__text">меню</span>
                                         <span class="burger__inner position-relative   d-flex justify-content-center align-items-center">
                                             <span></span>
                                         </span>

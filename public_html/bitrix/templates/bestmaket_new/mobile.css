@@ -401,7 +401,7 @@
 .clients-main .large-title {
 	font-size: 42px;
 	margin-top: 28px;
-	padding-left: 5px;
+	padding-left: 16px;
 	margin-bottom: 75px;
 }
 .clients-main .large-title span {
@@ -571,7 +571,11 @@
 	width: auto;
 }
 .footer .menu ul {
-	gap: 8px;
+	       justify-content:space-between;
+        row-gap: 15px;
+        padding-left:8px;
+				column-gap: 0;
+				margin-bottom: 40px;
 }
 .footer .menu ul li {
 	display: block;
@@ -584,6 +588,11 @@
 	display: block;
 	text-align: center;
 	padding: 2px 0;
+}
+.footer .info{
+	    padding-left: 8px;
+    padding-right: 10px;
+		margin-bottom: 20px;
 }
 .contaner.price {
 	background: none;
@@ -693,7 +702,7 @@
 }
 
 .contact-text {
-	padding: 20px 0;
+	padding: 10px 0;
 	float: none;
 	width: auto;
 }
@@ -1128,6 +1137,7 @@
 }
 .form-green .private {
 	font-size: 11px;
+	margin-bottom: 5px;
 }
 .form-green .private .check label {
 	background-position-y: 10%;
@@ -1274,6 +1284,7 @@
 .why-work .title {
 	font-size: 42px;
 	line-height: 0.9;
+	margin-bottom: 44px;
 }
 .why-work__text--left {
 	max-width: 100%;
@@ -1378,7 +1389,7 @@
 }
 .advantages{
 	padding-top: 70px;
-	padding-bottom: 97px;
+	padding-bottom: 90px;
 	
 }
 .advantages__title{
@@ -1418,6 +1429,7 @@
 }
 .main-contacts{
 	padding-top: 44px;
+	padding-bottom: 66px;
 }
 .main-contacts .container{
 	padding-inline: 7px;
@@ -1463,8 +1475,43 @@
 .main-contacts__text {
 	max-width: 100%;
 }
+.main-contacts__text--small {
+	padding-left: 2px;
+}
+.main-contacts .social__list{
+	margin-bottom: 48px;
+}
 .main-contacts .form-main.contact {
 	max-width: 100%;
+	margin-top: 20px;
+	margin-left: 15px;
+	padding-block: 30px;
+}
+.main-contacts .form-green .form-row:first-of-type .row-name{
+	margin-bottom: 17px;
+}
+.main-contacts .form-green .file-upload{
+	max-width: 250px;
+}
+.main-contacts .form-green .form-submit{
+	margin-top: 0;
+	max-width: 250px;
+}
+.main-contacts .form-green .private{
+	font-size: 14px;
+}
+.main-contacts .form-green .private .check label{
+	line-height: 1.3;
+	background-position-y: 3%;
+}
+.maps{
+	height: 540px;
+}
+.footer{
+	padding-top: 18px;
+}
+.footer .container{
+	padding-inline: 13px;
 }
 .menu-mob ul .submenu {
 	display: none;
@@ -1476,6 +1523,10 @@
 .menu-mob ul .item-open .submenu {
 	transform: scaleY(1);
 	margin-top: 16px;
+	        
+        display: flex !important;
+        gap: 13px;
+        padding-left: 56px;
 }
 
 .menu-mob ul .submenu a {
@@ -1486,6 +1537,7 @@
 	flex-direction: column;
 	font-size: 24px;
 	overflow-y: scroll;
+	gap: 8px;
 }
 .menu-mob ul a {
 	text-decoration: none;
@@ -1507,8 +1559,7 @@
 	background-color: #8dce26;
 	top: 15px;
 }
-.header.open .open-menu {
-}
+
 
 .menu-mob .second-item {
 	position: relative;
@@ -1530,6 +1581,7 @@
 }
 .menu__title {
 	font-size: 12px;
+	margin-bottom: 32px;
 }
 
 .burger__text {
@@ -1552,7 +1604,9 @@
 	padding-block: 4px;
 }
 .header.open .menu-mob {
-	padding-top: 20px;
+	padding-top: 23px;
+	padding-left: 20px;
+	
 	overflow-y: scroll !important;
 }
 .header.open .container {
@@ -1577,7 +1631,7 @@
 	transform: rotate(270deg);
 	opacity: 0;
 	right: -50%;
-	top: 60%;
+        top: 57%;
 	transition: all 0.5s ease-in-out;
 }
 .layouts-item:nth-child(4)::before,

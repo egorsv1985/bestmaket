@@ -52,11 +52,11 @@ $(document).ready(function () {
 		$('.header').toggleClass('open')
 		$('body').toggleClass('no-scroll')
 
-		var menuText = $(this).find('.text-uppercase')
-		if (menuText.text() === 'МЕНЮ') {
-			menuText.text('ЗАКРЫТЬ')
+		var menuText = $(this).find('.burger__text')
+		if (menuText.text() === 'меню') {
+			menuText.text('закрыть')
 		} else {
-			menuText.text('МЕНЮ')
+			menuText.text('меню')
 		}
 
 		return false

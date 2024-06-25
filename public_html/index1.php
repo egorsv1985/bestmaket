@@ -547,7 +547,7 @@ $APPLICATION->SetTitle("Главная");
 
 <section class="why-work">
 	<div class="container">
-		<h2 class="fs-64 mb-5 fw-300 title">Почему Вам стоит работать с нами</h2>
+		<h2 class="fs-64 fw-300 title">Почему Вам стоит работать с нами</h2>
 		<div class="why-work__content">
 			<div class="fs-24 fw-300 why-work__text why-work__text--left  position-relative"><strong class="fw-400 d-block">Макетная мастерская “Бэст
 					макет”.</strong> Мы
