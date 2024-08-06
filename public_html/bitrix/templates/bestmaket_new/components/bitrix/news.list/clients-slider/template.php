@@ -23,6 +23,7 @@ $this->setFrameMode(true);
 
 			if (CModule::IncludeModule("millcom.phpthumb")) {
 				$LOGO = CMillcomPhpThumb::generateImg($arItem['PROPERTIES']['LOGO']['VALUE'], 10);
+				$LOGO_WEBP = CMillcomPhpThumb::generateImg($arItem['PROPERTIES']['LOGO']['VALUE'], 15);
 				$PREVIEW = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 11);
 			}
 			?>
@@ -35,7 +36,7 @@ $this->setFrameMode(true);
 
 						<div class="intro">
 							<div class="letter">
-								<a href="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" class="fancy">
+								<a href="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" class="fancy">									
 									<img src="<?= $PREVIEW; ?>" alt="<?= htmlspecialchars($arItem['NAME']) ?>" width="200" height="260">
 								</a>
 							</div>
@@ -43,7 +44,11 @@ $this->setFrameMode(true);
 								<?= $arItem['~PREVIEW_TEXT']; ?>
 							</div>
 							<div class="logo">
-								<img src="<?= $LOGO; ?>" alt="<?= htmlspecialchars($arItem['NAME']) ?>" width="131" height="67">
+								<picture>
+									<source srcset="<?= $LOGO_WEBP; ?>" type="image/webp">
+									<img src="<?= $LOGO; ?>" alt="<?= htmlspecialchars($arItem['NAME']) ?>" width="131" height="67">
+								</picture>
+								
 							</div>
 						</div>
 						<div class="content">
@@ -53,7 +58,7 @@ $this->setFrameMode(true);
 
 							<div class="description">
 								<div class="desc-box">
-									
+
 									<?= $arItem['DETAIL_TEXT']; ?>
 								</div>
 								<button class="toggle-button d-lg-none">Показать еще</button>

@@ -20,10 +20,10 @@ $this->setFrameMode(true);
 		</h2>
 	</div>
 	<div class="number-item large">
-		<div class="number-container" style="background:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts1.png') no-repeat center / cover"></div>
+		<div class="number-container" style="  background: url('<?= SITE_TEMPLATE_PATH; ?>/images/facts1.webp') no-repeat center / cover;"></div>
 	</div>
 	<div class="number-item small">
-		<div class="number-container" style="background:url('<?= SITE_TEMPLATE_PATH; ?>/images/facts2.png') no-repeat center / cover"></div>
+		<div class="number-container" style="  background: url('<?= SITE_TEMPLATE_PATH; ?>/images/facts2.webp') no-repeat center / cover;"></div>
 	</div>
 	<div class="number__box d-flex flex-wrap  position-relative">
 
